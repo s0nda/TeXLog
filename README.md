@@ -70,5 +70,5 @@ folgendem Syntax.
   - `\>` ist äquivalent zu `\:`,
   - `\;` stellt horizontalen Leerabstand von `.2777em` dar,
   - Für mehr Informationen, siehe
-  (StackExchange)[https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing]
+  [StackExchange](https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing)
 
