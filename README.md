@@ -13,6 +13,7 @@ nicht schön genug empfunden, da der vertikale Abstand zwischen
 Zähler und dem Bruchstrich etwas zu groß dargestellt.
 
 ![cfrac_dfrac_cases](https://raw.githubusercontent.com/s0nda/TeXLog/main/media/img/cfrac_dfrac_cases.png)
+
 **Abbildung:** Problem mit dem zu hoch dargestellten Zähler.
 
 Um diesen *übermäßig* hohen Abstand auf die gewünschte Länge
