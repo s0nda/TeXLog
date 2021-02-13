@@ -4,13 +4,15 @@
 
 ## FAQ ##
 
-1. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler.
+1. **`\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler.**
 
 In LaTeX wird der Befehl `\cfrac` oder `\dfrac` verwendet, um
-Bruchzahlen in größerer Form darzustellen. Leider wird diese
-Darstellung (*siehe Abbildung unten*) von vielen Usern als
-nicht schön genug empfunden, da der vertikale Abstand zwischen
-Zähler und dem Bruchstrich etwas zu groß dargestellt.
+Bruchzahlen in größerer Schriftgröße darzustellen.
+
+Leider wird diese Darstellung (*siehe Abbildung*) von vielen
+Usern als nicht schön genug empfunden, da der vertikale
+Abstand zwischen dem Zähler und dem Bruchstrich etwas zu groß
+erscheint.
 
 ![cfrac_dfrac_cases](https://raw.githubusercontent.com/s0nda/TeXLog/main/media/img/cfrac_dfrac_cases.png)
 
@@ -44,3 +46,4 @@ Die Verwendung von `\ofrac` ist nach folgendem Syntax.
   befindet. Das bedeutet, sowohl *mit* als auch *ohne* das Markup-
   Zeichen `$..$` bzw. `\( .. \)` wird `<Inhalt>` immer richtig als
   mathematischer Ausdruck interpretiert.
+-
