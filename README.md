@@ -35,9 +35,11 @@ Der Cobige de für `\ofrac` sieht folgendermaßen aus.
 }
 ```
 
-Die Befehlsdefinition `\newcommand{}` muss außerhalb und
-vor dem `\begin{document}`-Bereich platziert sein.
-Die Verwendung von `\ofrac` ist nach folgendem Syntax.
+Die Befehlsdefinition `\newcommand{\ofrac}[2]` muss außerhalb
+und vor dem `\begin{document}`-Bereich platziert sein.
+Der Befehl `\ofrac{#1}{#2}` erwartet zwei Argumente, *#1*
+für *Zähler*, *#2* für *Nenner*. Die Verwendung ist nach
+folgendem Syntax.
 
 **Syntax**: `\ofrac{<Zähler>}{<Nenner>}`
 
@@ -52,3 +54,21 @@ Die Verwendung von `\ofrac` ist nach folgendem Syntax.
   Grund ist `\dfrac{<Zähler>}{<Nenner>}` die Abkürzung für
   `\frac{\displaystyle <Zähler>}{\displaystyle <Nenner>}`.
   Also steht das `d` in `\dfrac` für `\displaystyle`.
+- `\scriptscriptstyle <Argument>` wird verwendet, um das
+  `<Argument>` (Zahlen, Formeln) in Kleinschrift darzustellen.
+  Es gibt folgende Schriftgrößen für mathematische Ausdrücke -
+  der Größe nach absteigend geordnet - `\displaystyle` bzw.
+  `\textstyle`, `\scriptstyle`, `\scriptscriptstyle`,
+  `\small`, `\tiny`.
+- `\:` ist ein Ausdruck für das sogenannte *horizontal spacing*
+  und stellt einen horizontalen Leerabstand von `.2222em` dar.
+  Es gibt weitere solche *horinzontal spacing* wie z.B.
+
+  - `\,` stellt horizontalen Leerabstand von `.16667em` dar,
+  - `\!` ist das Gegenteil (negativ) von `\,`,
+  - `\:` stellt horizontalen Leerabstand von `.2222em` dar,
+  - `\>` ist äquivalent zu `\:`,
+  - `\;` stellt horizontalen Leerabstand von `.2777em` dar,
+  - Für mehr Informationen, siehe
+  (StackExchange)[https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing]
+
