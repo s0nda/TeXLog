@@ -18,11 +18,10 @@ Zähler und dem Bruchstrich etwas zu groß dargestellt.
 Ziwschen der Zahl `7` und dem Bruchstrich `_` besteht relativ
 großer leerer Abstand.
 
-Um diesen *übermäßig* hohen Abstand auf die gewünschte Länge
-zu verkürzen, wird durch die Definition eines eigenen Befehls
+Um diesen hohen leeren Abstand auf die gewünschte Länge
+zu verringern, wird durch die Definition eines eigenen Befehls
 (engl. command) namens `\ofrac` erreicht. Der Code dafür sieht
 folgendermaßen aus.
-
 ```
 % new command for displaying fractions
 \newcommand{\ofrac}[2]{%
@@ -33,10 +32,9 @@ folgendermaßen aus.
 }
 ```
 
-Die obige Definition über `\newcommand{}` muss außerhalb und
-vor dem `\begin{document}` stattfinden. Die Verwendung von
+Die obige Befehlsdefinition über `\newcommand{}` muss außerhalb und
+vor dem `\begin{document}`-Bereichs stattfinden. Die Verwendung von
 `\ofrac` ist entsprechend folgendem Syntax.
-
 ```
 \ofrac{<Zähler>}{<Nenner>}
 ```
