@@ -17,13 +17,14 @@ erscheint.
 ![cfrac_dfrac_cases](https://raw.githubusercontent.com/s0nda/TeXLog/main/media/img/cfrac_dfrac_cases.png)
 
 **Abbildung:** Problem mit dem zu hoch dargestellten Zähler.
-Ziwschen der Zahl `7` und dem Bruchstrich `_` besteht relativ
-großer leerer Abstand.
+Zwischen dem Zähler "7" und dem Bruchstrich "_" besteht
+relativ viel Leerabstand.
 
-Um diesen hohen Leerabstand auf die gewünschte Länge zu
-reduzieren, wird über die Definition des eigenen Befehls
-(engl. command) `\ofrac` erreicht. Der Code dafür sieht
-folgendermaßen aus.
+Um dieses Problem mit dem (hohen) Leerabstand umzugehen,
+wird ein eigener Befehl (*engl.* command) `\ofrac` definiert,
+mittels dessen Bruchzahlen mit besserem (kleinerem) Abstand
+zwischen Zähler (Nenner) und Bruchstrich dargestellt werden.
+Der Code für `\ofrac` sieht folgendermaßen aus.
 ```
 % new command for displaying fractions
 \newcommand{\ofrac}[2]{%
