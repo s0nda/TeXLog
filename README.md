@@ -78,7 +78,10 @@ folgendem Syntax.
 
 - `\phantom{<Zeichen>}` fügt ein *unsichtbares* Zeichen ein.
 - `\over` ist das *Oldschool* von `\frac{}{}` und wird verwendet,
-  um Bruchzahlen darzustellen. Syntax: `<Zähler> \over <Nenner>`.
+  um Bruchzahlen darzustellen. Der Syntax lautet:
+  ```
+  <Zähler> \over <Nenner>`
+  ```
   `\over` ist im Package `asmmath` definiert und mittels dessen
   der uns heute bekannte Befehl `\frac{}{}` definiert wird:
   ```
@@ -89,4 +92,4 @@ folgendem Syntax.
   - [What is the difference between \over and \frac?](https://tex.stackexchange.com/questions/73822/what-is-the-difference-between-over-and-frac/)
   - [Practical consequences of using \over vs. \frac?](https://tex.stackexchange.com/questions/365328/practical-consequences-of-using-over-vs-frac)
 
-  
+
