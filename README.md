@@ -24,7 +24,7 @@ Um dieses Problem mit dem (hohen) Leerabstand umzugehen,
 wird ein eigener Befehl (*engl.* command) `\ofrac` definiert,
 mittels dessen Bruchzahlen mit besserem (kleinerem) Abstand
 zwischen Zähler (Nenner) und Bruchstrich dargestellt werden.
-Der Code für `\ofrac` sieht folgendermaßen aus.
+Der Cobige de für `\ofrac` sieht folgendermaßen aus.
 ```
 % new command for displaying fractions
 \newcommand{\ofrac}[2]{%
@@ -35,7 +35,7 @@ Der Code für `\ofrac` sieht folgendermaßen aus.
 }
 ```
 
-Die obige Befehlsdefinition `\newcommand{}` muss außerhalb und
+Die Befehlsdefinition `\newcommand{}` muss außerhalb und
 vor dem `\begin{document}`-Bereich platziert sein.
 Die Verwendung von `\ofrac` ist nach folgendem Syntax.
 
@@ -43,8 +43,12 @@ Die Verwendung von `\ofrac` ist nach folgendem Syntax.
 
 **Erklärung des Befehls**:
 - `\ensuremath{<Inhalt>}` wird verwendet, um sicherzustellen, dass
-  sich der eingegebene `<Inhalt>` (Text, Formeln) immer im `math mode`
+  sich der eingegebene `<Inhalt>` (Text, Formel) immer im `math mode`
   befindet. Das bedeutet, sowohl *mit* als auch *ohne* das Markup-
   Zeichen `$..$` bzw. `\( .. \)` wird `<Inhalt>` immer richtig als
   mathematischer Ausdruck interpretiert.
--
+- `\displaystyle <Argument>` wird verwendet, um das `<Argument>`
+  (Zahlen, Formeln) in Großschrift darzustellen. Aus diesem guten
+  Grund ist `\dfrac{<Zähler>}{<Nenner>}` die Abkürzung für
+  `\frac{\displaystyle <Zähler>}{\displaystyle <Nenner>}`.
+  Also steht das `d` in `\dfrac` für `\displaystyle`.
