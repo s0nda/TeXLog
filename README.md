@@ -18,9 +18,9 @@ Zähler und dem Bruchstrich etwas zu groß dargestellt.
 Ziwschen der Zahl `7` und dem Bruchstrich `_` besteht relativ
 großer leerer Abstand.
 
-Um diesen hohen leeren Abstand auf die gewünschte Länge
-zu verringern, wird durch die Definition eines eigenen Befehls
-(engl. command) namens `\ofrac` erreicht. Der Code dafür sieht
+Um diesen hohen Leerabstand auf die gewünschte Länge zu
+reduzieren, wird über die Definition des eigenen Befehls
+(engl. command) `\ofrac` erreicht. Der Code dafür sieht
 folgendermaßen aus.
 ```
 % new command for displaying fractions
@@ -32,9 +32,15 @@ folgendermaßen aus.
 }
 ```
 
-Die obige Befehlsdefinition über `\newcommand{}` muss außerhalb und
-vor dem `\begin{document}`-Bereichs stattfinden. Die Verwendung von
-`\ofrac` ist entsprechend folgendem Syntax.
-```
-\ofrac{<Zähler>}{<Nenner>}
-```
+Die obige Befehlsdefinition `\newcommand{}` muss außerhalb und
+vor dem `\begin{document}`-Bereich platziert sein.
+Die Verwendung von `\ofrac` ist nach folgendem Syntax.
+
+**Syntax**: `\ofrac{<Zähler>}{<Nenner>}`
+
+**Erklärung des Befehls**:
+- `\ensuremath{<Inhalt>}` wird verwendet, um sicherzustellen, dass
+  sich der eingegebene `<Inhalt>` (Text, Formeln) immer im `math mode`
+  befindet. Das bedeutet, sowohl *mit* als auch *ohne* das Markup-
+  Zeichen `$..$` bzw. `\( .. \)` wird `<Inhalt>` immer richtig als
+  mathematischer Ausdruck interpretiert.
