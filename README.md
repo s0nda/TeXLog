@@ -44,22 +44,26 @@ folgendem Syntax.
 **Syntax**: `\ofrac{<Zähler>}{<Nenner>}`
 
 **Erklärung des Befehls**:
-- `\ensuremath{<Inhalt>}` wird verwendet, um sicherzustellen, dass
-  sich der eingegebene `<Inhalt>` (Text, Formel) immer im `math mode`
-  befindet. Das bedeutet, sowohl *mit* als auch *ohne* das Markup-
-  Zeichen `$..$` bzw. `\( .. \)` wird `<Inhalt>` immer richtig als
-  mathematischer Ausdruck interpretiert.
-- `\displaystyle <Argument>` wird verwendet, um das `<Argument>`
-  (Zahlen, Formeln) in Großschrift darzustellen. Aus diesem guten
-  Grund ist `\dfrac{<Zähler>}{<Nenner>}` die Abkürzung für
+- `\ensuremath{<Inhalt>}` stellt sicher, dass sich der eingegebene
+  `<Inhalt>` (Text, Formel) immer im `math mode` befindet.
+  Das bedeutet, dass sowohl *mit* als auch *ohne* Markup-Zeichen
+  `$..$` bzw. `\( .. \)` der `<Inhalt>` immer richtig als
+  mathematischer Ausdruck interpretiert werden kann.
+- `\displaystyle <Argument>` stellt das `<Argument>` (Zahlen,
+  Formeln) in Großschrift dar. Aus diesem guten Grund ist
+  `\dfrac{<Zähler>}{<Nenner>}` die Abkürzung für
   `\frac{\displaystyle <Zähler>}{\displaystyle <Nenner>}`.
   Also steht das `d` in `\dfrac` für `\displaystyle`.
-- `\scriptscriptstyle <Argument>` wird verwendet, um das
-  `<Argument>` (Zahlen, Formeln) in Kleinschrift darzustellen.
-  Es gibt folgende Schriftgrößen für mathematische Ausdrücke -
-  der Größe nach absteigend geordnet - `\displaystyle` bzw.
-  `\textstyle`, `\scriptstyle`, `\scriptscriptstyle`,
-  `\small`, `\tiny`.
+- `\scriptscriptstyle <Argument>` stellt das `<Argument>` (Zahlen,
+  Formeln) in Kleinschrift dar. Es gibt folgende Schriftgrößen
+  für mathematische Ausdrücke - der Größe nach absteigend geordnet:
+  
+  - `\displaystyle` bzw. `\textstyle`,
+  - `\scriptstyle`,
+  - `\scriptscriptstyle`,
+  - `\small`,
+  - `\tiny`
+
 - `\:` ist ein Ausdruck für das sogenannte *horizontal spacing*
   und stellt einen horizontalen Leerabstand von `.2222em` dar.
   Es gibt weitere solche *horinzontal spacing* wie z.B.
@@ -72,3 +76,17 @@ folgendem Syntax.
   - Für mehr Informationen, siehe
   [StackExchange](https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing)
 
+- `\phantom{<Zeichen>}` fügt ein *unsichtbares* Zeichen ein.
+- `\over` ist das *Oldschool* von `\frac{}{}` und wird verwendet,
+  um Bruchzahlen darzustellen. Syntax: `<Zähler> \over <Nenner>`.
+  `\over` ist im Package `asmmath` definiert und mittels dessen
+  der uns heute bekannte Befehl `\frac{}{}` definiert wird:
+  ```
+  \DeclareRobustCommand{\frac}[2]{{\begingroup#1\endgroup\@@over#2}}
+  ```
+  Für mehr Informationen, siehe:
+
+  - [What is the difference between \over and \frac?](https://tex.stackexchange.com/questions/73822/what-is-the-difference-between-over-and-frac/)
+  - [Practical consequences of using \over vs. \frac?](https://tex.stackexchange.com/questions/365328/practical-consequences-of-using-over-vs-frac)
+
+  
