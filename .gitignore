@@ -1,0 +1,35 @@
+# Ignore files in ./tex/thesis/Esra_Solmaz/ folder
+/tex/thesis/Esra_Solmaz/*.aux
+/tex/thesis/Esra_Solmaz/*.bbl
+/tex/thesis/Esra_Solmaz/*.bcf
+/tex/thesis/Esra_Solmaz/*.blg
+/tex/thesis/Esra_Solmaz/*.gz
+/tex/thesis/Esra_Solmaz/*.idx
+/tex/thesis/Esra_Solmaz/*.ilg
+/tex/thesis/Esra_Solmaz/*.ind
+/tex/thesis/Esra_Solmaz/*.lof
+/tex/thesis/Esra_Solmaz/*.log
+/tex/thesis/Esra_Solmaz/*.out
+/tex/thesis/Esra_Solmaz/*.run.xml
+/tex/thesis/Esra_Solmaz/*.synctex
+/tex/thesis/Esra_Solmaz/*.synctex.gz
+/tex/thesis/Esra_Solmaz/*.toc
+# Ignore files in ./tex/thesis/Esra_Solmaz/vorlage/ folder
+/tex/thesis/Esra_Solmaz/vorlage/*.aux
+/tex/thesis/Esra_Solmaz/vorlage/*.bbl
+/tex/thesis/Esra_Solmaz/vorlage/*.bcf
+/tex/thesis/Esra_Solmaz/vorlage/*.blg
+/tex/thesis/Esra_Solmaz/vorlage/*.gz
+/tex/thesis/Esra_Solmaz/vorlage/*.idx
+/tex/thesis/Esra_Solmaz/vorlage/*.ilg
+/tex/thesis/Esra_Solmaz/vorlage/*.ind
+/tex/thesis/Esra_Solmaz/vorlage/*.lof
+/tex/thesis/Esra_Solmaz/vorlage/*.log
+/tex/thesis/Esra_Solmaz/vorlage/*.out
+/tex/thesis/Esra_Solmaz/vorlage/*.pdf
+/tex/thesis/Esra_Solmaz/vorlage/*.run.xml
+/tex/thesis/Esra_Solmaz/vorlage/*.synctex
+/tex/thesis/Esra_Solmaz/vorlage/*.synctex.gz
+/tex/thesis/Esra_Solmaz/vorlage/*.toc
+# Except the .gitignore file itself
+!.gitignore
