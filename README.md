@@ -82,8 +82,8 @@ folgendem Syntax.
   ```
   <Zähler> \over <Nenner>`
   ```
-  `\over` ist im Package `asmmath` definiert und mittels dessen
-  der uns heute bekannte Befehl `\frac{}{}` definiert wird:
+  `\over` ist im Package `asmmath` definiert. Mithilfe von `\over`
+  wird der uns heute bekannte Befehl `\frac{}{}` definiert:
   ```
   \DeclareRobustCommand{\frac}[2]{{\begingroup#1\endgroup\@@over#2}}
   ```

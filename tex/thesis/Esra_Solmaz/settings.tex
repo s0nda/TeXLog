@@ -1,0 +1,46 @@
+%
+% settings.tex
+%
+%======================================================
+% import packages
+%======================================================
+\usepackage[utf8]{inputenc}%\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[autostyle]{csquotes}% load "csquotes" when working with "babel" and "bibtex" to avoid
+                                % the warning "'babel/polyglossia' detected but 'csquotes' missing".
+%\usepackage[sc]{mathpazo}
+%\usepackage{mathptmx}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{bm}% display bold maths symbols
+\usepackage{float}% used with \begin{figure}[H] to set fixed position
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{imakeidx}% create index for later looking-up
+\usepackage{hyperref}
+\usepackage{hypcap}
+\usepackage[backend=biber,style=numeric,]{biblatex}% bibliography processor [biber] for BibLatex,
+                                                   % [style=alphabetic,]
+
+
+%======================================================
+% configurations
+%======================================================
+\makeindex % create index for later looking-up.
+\setlength\parindent{0pt}% set \noindent for entrie file.
+%
+% command for setting indentation and parskip in minipage.
+\setlength{\parskip}{\medskipamount}% set vertical spacing between two paragraphs (glocal), \parskip = paragraph skip
+\makeatletter 
+\newcommand{\@minipagerestore}{%
+  \setlength{\parindent}{0pt}% set indentation at paragraph begin (local)
+  \setlength{\parskip}{\medskipamount}% set vertical spacing between two paragraphs (local, minipage), \parskip = paragraph skip
+}
+\makeatother
+
+
+%======================================================
+% define new environments
+%======================================================
+\newtheorem{mydef}{Definition}[section]
+\newtheorem{mythm}[mydef]{Theorem}
+\newtheorem{beweis}{Beweis}

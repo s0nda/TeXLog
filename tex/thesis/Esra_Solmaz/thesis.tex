@@ -1,0 +1,105 @@
+%
+% Title: "Bachelorarbeit"
+% File:  "thesis.tex"
+%
+\documentclass[footinclude=false,oneside,fontsize=11pt,paper=a4]{scrbook} % one-sided
+
+%======================================================
+% import packages and configurations
+%======================================================
+\input{settings}
+
+%======================================================
+% import bibliography (bibtex)
+%======================================================
+\addbibresource{bibliography.bib}
+
+%=====================================================%
+%                                                     %
+%             BEGIN DOCUMENT                          %
+%                                                     %
+%=====================================================%
+\begin{document}
+
+%======================================================
+% Cover Page
+%======================================================
+\pagestyle{empty}% no page numbering
+\input{pages/cover}
+\pagenumbering{arabic}% set page numbering (alph,roman,arabic)
+
+%======================================================
+% Abstract
+%======================================================
+\input{pages/abstract}
+
+%======================================================
+% Table of Contents
+%======================================================
+\tableofcontents
+
+%======================================================
+% Chapter 1
+%======================================================
+\input{pages/chap001}
+
+%======================================================
+% Chapter 2
+%======================================================
+\input{pages/chap002}
+
+%======================================================
+% Print the index list for later looking-up
+%======================================================
+\printindex
+
+%======================================================
+% Print the bibliography (BibLatex)
+%
+% 1. Install Biber:
+%       $ sudo apt install biber
+%
+% 2. Import package {biber} for creating bibliography:
+%       \usepackage[backend=biber,style=numeric,]{biblatex}
+%
+% 3. Import package {csquotes} when working with "babel"
+%    and "bibtex" to avoid the warning "'babel/polyglossia'
+%    detected but 'csquotes' missing":
+%
+%       \usepackage[autostyle]{csquotes}
+%
+% 4. Add bibliography file before \begin{document}:
+%       \addbibresource{bibliography.bib}
+%
+% 5. Add command for printing bibliography:
+%       \printbibliography
+%
+% 6. Run in console:
+%       $ pdflatex primzahlen.tex
+%       $ biber primzahlen.bcf
+%       $ pdflatex primzahlen.tex
+%       $ pdflatex primzahlen.tex
+%
+%======================================================
+\printbibliography
+
+%======================================================
+% Print list of figures (Abbildungsverzeichnis)
+%
+% 1. Import packages "\usepackage{graphicx}" and
+%    "\usepackage{caption}".
+% 2. Add "\listoffigures" within "\begin{doucment}".
+% 3. Use "\begin{figure}"-environment and "\includegraphics"
+%    to bind/display images.
+% 4. Use "\caption[<short-title>]{<long-title>}" or
+%    "\cationof{figure}[<list-entry-description>]{<title>}"
+%    to assign caption to image and update image-list.
+% 5. Compile .tex file twice:
+%       $ pdflatex primzahlen.tex
+%       $ pdflatex primzahlen.tex
+%
+%======================================================
+\listoffigures
+
+
+\end{document}
