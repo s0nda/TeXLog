@@ -14,22 +14,22 @@
 /tex/thesis/Esra_Solmaz/*.synctex
 /tex/thesis/Esra_Solmaz/*.synctex.gz
 /tex/thesis/Esra_Solmaz/*.toc
-# Ignore files in ./tex/thesis/Esra_Solmaz/vorlage/ folder
-/tex/thesis/Esra_Solmaz/vorlage/*.aux
-/tex/thesis/Esra_Solmaz/vorlage/*.bbl
-/tex/thesis/Esra_Solmaz/vorlage/*.bcf
-/tex/thesis/Esra_Solmaz/vorlage/*.blg
-/tex/thesis/Esra_Solmaz/vorlage/*.gz
-/tex/thesis/Esra_Solmaz/vorlage/*.idx
-/tex/thesis/Esra_Solmaz/vorlage/*.ilg
-/tex/thesis/Esra_Solmaz/vorlage/*.ind
-/tex/thesis/Esra_Solmaz/vorlage/*.lof
-/tex/thesis/Esra_Solmaz/vorlage/*.log
-/tex/thesis/Esra_Solmaz/vorlage/*.out
-/tex/thesis/Esra_Solmaz/vorlage/*.pdf
-/tex/thesis/Esra_Solmaz/vorlage/*.run.xml
-/tex/thesis/Esra_Solmaz/vorlage/*.synctex
-/tex/thesis/Esra_Solmaz/vorlage/*.synctex.gz
-/tex/thesis/Esra_Solmaz/vorlage/*.toc
+# Ignore files in ./tex/thesis/vorlage/ folder
+/tex/thesis/vorlage/*.aux
+/tex/thesis/vorlage/*.bbl
+/tex/thesis/vorlage/*.bcf
+/tex/thesis/vorlage/*.blg
+/tex/thesis/vorlage/*.gz
+/tex/thesis/vorlage/*.idx
+/tex/thesis/vorlage/*.ilg
+/tex/thesis/vorlage/*.ind
+/tex/thesis/vorlage/*.lof
+/tex/thesis/vorlage/*.log
+/tex/thesis/vorlage/*.out
+/tex/thesis/vorlage/*.pdf
+/tex/thesis/vorlage/*.run.xml
+/tex/thesis/vorlage/*.synctex
+/tex/thesis/vorlage/*.synctex.gz
+/tex/thesis/vorlage/*.toc
 # Except the .gitignore file itself
 !.gitignore
