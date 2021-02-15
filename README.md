@@ -92,4 +92,6 @@ folgendem Syntax.
   - [What is the difference between \over and \frac?](https://tex.stackexchange.com/questions/73822/what-is-the-difference-between-over-and-frac/)
   - [Practical consequences of using \over vs. \frac?](https://tex.stackexchange.com/questions/365328/practical-consequences-of-using-over-vs-frac)
 
+[Bachelorarbeit "Satz von Wilson"](https://www.overleaf.com/read/mzbmgbxsbrqj)
+
 
