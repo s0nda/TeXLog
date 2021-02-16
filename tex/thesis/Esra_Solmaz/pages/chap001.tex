@@ -7,11 +7,11 @@
 %======================================================
 \section{Primzahlbegriff und geschichtliche Aspekte}
 %======================================================
-\begin{mydef}[Primzahl]
+\begin{definition}[Primzahl]
 ``Eine Primzahl ist eine natürliche Zahl $p > 1$, die nur 
 die trivialen Teiler besitzt, d.h. deren einzige Teiler
 1 und sie selbst sind'' \cite{schichlsteinbauer}, S. 23.
-\end{mydef}
+\end{definition}
 \vspace{-.5cm}
 
 \begin{minipage}{0.65\linewidth}
@@ -31,13 +31,13 @@ Theorien nicht beweisen.
 \begin{minipage}[r]{0.3\linewidth}
   % insert this 2 lines before \includegraphics to avoid the warning "the option `hypcap=true' will be ignored for this particular \caption on input line.
   % This warning occurs, because a conflict at paramter "hypcap=true" when load both packages "hyperref" and "caption".
-  %\captionsetup[figure]{font=small,skip=6pt}%{labelformat=empty}% turn off figure prefix "Figure:" or "Abbildung"
+  %\captionsetup[figure]{labelformat=empty}% turn off figure prefix "Figure:" or "Abbildung"
   \captionsetup{type=figure,font=small,skip=6pt,format=plain}% {format=hand}
   \capstart
-  \includegraphics[width=1.0\linewidth]{./images/euklid.png}
-  %\captionof{figure}[Bild von Euklid. https://www.antike-griechische.de/Euklid.html. 2021)]{Bild von Euklid}
-  \captionof{figure}[Fantasieportrait Euklids. Das Bild wurde von Norbert Froese's Arbeit \textit{``Euklid und die Elemente. Die Entdeckung der axiomatischen Methode durch Euklid"} kopiert. Das ursprüngliche Bild stammt vom französischen Maler Charles Paul Landon (1760 – 1826). https://www.antike-griechische.de/Euklid.pdf. 2021)]{Euklid und die Elemente, 2021}
-  \label{fig:sample_figure}
+  \includegraphics[width=1.0\linewidth]{./images/euklid.jpg}
+  \captionof{figure}[Bild von Euklid (Kurz-Info: Euklid und die Elemente,
+2021]{Bild von Euklid}
+  \label{fig:portrait_euklid}
 \end{minipage}
 \vspace{.3cm}
 
@@ -47,9 +47,11 @@ mit korrekt geführten Beweisen beinhalteten'' (vgl. Sas
 2002-2008, S. 4). Einer der wichtigen Beweise sind die
 unendlich vielen Primzahlen.
 
-\begin{mythm}[Satz von Euklid]
+\begin{theorem}[Satz von Euklid]
 Es gibt unendlich viele Primzahlen.
-\end{mythm}
+\end{theorem}
+\vspace{-.7cm}
+
 \begin{proof}
 Angenommen gäbe es nur endlich viele Primzahlen.
 So bezeichnet man sie mit $p_1 ,...,p_n$ und $n$
@@ -62,7 +64,7 @@ Jede solche Zahl ist durch mindestens eine Primzahl teilbar.
 Hinsichtlich dieser Tatsache muss es eine Primzahl geben, 
 die $m$ teilt. ``Dies ist jedoch nicht möglich, da $m$
 durch keine der Primzahlen $p_i$ $(1 \leq i \leq n)$ teilbar
-ist. (Es bleibt ja immer ein Rest von 1). Die logische
+ist. (Es bleibt ja immer ein Rest von 1)''. Die logische
 Schlusskette endet in einem Widerspruch
 (vgl. \cite{schichlsteinbauer}, S. 25).
 \end{proof}
@@ -212,11 +214,11 @@ liegt (vgl. Karpfinger \& Kiechle 2010, S.141).
 Des Weiteren definiert der Primzahlsatz eine asymptotische
 Aussage über die Anzahl der Primzahlen (vgl. Schürz 2016, S.3).
 
-\begin{mythm}[Primzahlsatz]
+\begin{theorem}[Primzahlsatz]
 Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
 \( \lim\limits_{x\to\infty} \pi(x)\cdot \frac{\log(x)}{x} = 1 \)
 (vgl. Karpfinger \& Kiechle 2010, S.142).
-\end{mythm}
+\end{theorem}
 
 \textbf{ARTEN VON PRIMZAHLTESTS}
 \begin{itemize}
@@ -229,6 +231,7 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     Primzahltests wie beispielsweise die Probedivision,
     Sieb des Eratosthenes und Sieb von Atkin können mögliche
     Teiler einfach gefunden werden (vgl. Primzahltests, 2021).
+    
  \item \textbf{Tests auf Zusammengesetztheit}\\
     Bestätigt ein Test dieser Form das Ergebnis
     ''zusammengesetzt``, so ist die zu prüfende Zahl mit
@@ -238,12 +241,14 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     Die Tests auf Zusammengesetztheit beziehen sich auf die
     Aussagen der Art ''Gelten bestimmte Bedingungen, ist $n$
     zusammengesetzt`` bzw. ''Ist $n$ prim, so gilt das
-    Folgende`` (vgl. Sas 2002-2008, S.11).\\\\
+    Folgende`` (vgl. Sas 2002-2008, S.11).
+    
     Eine natürliche Zahl $n$ wird zusammengesetzt bezeichnet,
     wenn es Zahlen $a,b \in\mathbb{N} \land a,b > 1$ vorhanden
     sind und $n = a\cdot b$ ist. Somit sind die
     zusammengesetzten Zahlen keine Primzahlen
     (vgl. Karpfinger \& Kiechle 2010, S.141).
+    
  \item \textbf{Tests auf Primalität}\\
     Eine weitere Variante hinsichtlich der Primzahltests
     sind die Tests auf Primalität, die nur mit Sicherheit
@@ -252,6 +257,7 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     Bedingungen, so ist $n$ prim`` bzw. ''Ist $n$
     zusammengesetzt, so gilt das Folgende``
     (vgl. Sas 2002-2008, S.11).
+    
  \item \textbf{Probabilistische Tests}\\
     Die probabilistische Primzahltests bauen auf Tests auf
     Zusammengesetztheit bzw. auf Test auf Primalität auf
@@ -263,13 +269,15 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     zusammengesetzt (vgl. Forster 2015, S. 92). Beispiele für
     probabilistische Tests sind der Fermat-Tests und
     Miller-Rabin-Test (vgl. Primzahltests, 2021).
+    
  \item \textbf{Deterministische Tests}\\
     Eine weitere Form von Tests sind die deterministischen
     Tests. Ein Test heißt deterministisch, wenn er stets ein
     richtiges Ergebnis liefert bzw. wenn der Test
     ''$n \in\mathbb{P}$`` als Ergebnis ausgibt. So ist die
     Zahl $n$ auch ganz sicher eine Primzahl
-    (vgl. Karpfinger \& Kiechle 2010, S.141).\\\\
+    (vgl. Karpfinger \& Kiechle 2010, S.141).
+    
     Der Unterschied hinsichtlich der oben erwähnten Tests
     liegt an ihrer Komplexität und ihrer Genauigkeit.
     Die Probedivision beweist das Vorliegen einer Primzahl.
@@ -288,5 +296,64 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     Bei diesem Test kann die Aussage ''$n \in\mathbb{P}$``
     mit einer gewissen, kontrollierbar kleinen
     Fehlerwahrscheinlichkeit falsch sein
-    (vgl. Karpfinger \& Kiechle 2010, S.141).
+    (vgl. Karpfinger \& Kiechle 2010, S.141).\\
+    Aufgrund der eindeutigen Vorstellung werden in den
+    weiteren Abschnitten zwei Primzahltests kurz näher
+    dargestellt. Es wird (neben dem Sieb von Eratosthenes)
+    ein weiterer ''echter`` Primzahltest namens
+    Probedivision und ein bekannter probabilistischer Test
+    wie der Fermat-Test in den Vordergrund gebracht.\\
 \end{itemize}
+
+
+\textbf{DIE PROBEDIVISION}
+
+Bei diesem Verfahren wird eine ungerade natürliche Zahl
+$n$ betrachtet. Jeder Faktorisierungsalgorithmus und auch
+jeder praktische Primzahltest beginnt mit der Probedivision.
+Es wird überprüft, ob die Zahl $n$ durch bekannte, kleine
+Primzahlen wie $3, 5, 7, 11, 13$, usw. teilbar ist.
+Effizient wird das mit der Division mit Rest gemacht.
+Definiert man bei der Division von $n$ durch $p$ keinen Rest,
+so gibt es einen Teiler von $n$ und somit ist die Zahl $n$
+keine Primzahl. Des Weiteren werden die kleinen Primzahlen
+in einer Liste geführt und diese Liste ist so geformt,
+dass alle Elemente in 16-Bit-Wörter gespeichert werden können
+(vgl. Karpfinger \& Kiechle 2010, S.142).
+
+Im Falle eines negativen Ergebnisses, d.h. falls der Test
+negativ ausfällt und keine kleinen Primteiler bestätigt
+werden, dann wird mit einem anderen Verfahren fortgesetzt
+und heutzutage ist diese Methodik meistens der 
+Miller-Rabin-Test (vgl. Karpfinger \& Kiechle 2010, S.142).
+
+\begin{example}
+Die Zahl $n = 253$ wird mit Rest nacheinander durch die
+Primzahlen $2, 3, 5, 7$ und $11$ geteilt und es wird die
+Zerlegung festgestellt, dass $n = 11\cdot 23$ ist
+(vgl. Karpfinger \& Kiechle 2010, S.142).
+\end{example}
+\vspace{.3cm}
+
+\textbf{DER FERMAT-TEST}
+
+Dieser Primzahltest bezieht sich auf den kleinen Satz
+von Fermat.
+\begin{theorem}[Kleiner Fermatscher Satz]
+''Sei $p$ eine Primzahl und $a$ eine beliebige natürliche
+Zahl mit $ggT(a,p)=1$, so gilt $\; a^{p-1} \;\equiv\; 1\mod p$“
+(Sas 2002-2008, S. 14).
+\end{theorem}
+
+Wird dieser Ausdruck mit $a$ multipliziert, so erhält man
+\[
+ a^p \;\equiv\; a \mod p
+\]
+Der Grund dafür ist, dass $ggT(a,p)=1$ und somit ist der
+erste Ausdruck identisch zum zweiten Ausdruck
+(vgl. Sas, 2008-2012, S.14).
+
+Weitere Hintergründe hinsichtlich dieses Satzes werden
+in der Arbeit nicht näher vorgestellt.
+Somit ist der erste Teil der Arbeit bezüglich der
+allgemeinen Darstellung der Primzahlen abgeschlossen.
