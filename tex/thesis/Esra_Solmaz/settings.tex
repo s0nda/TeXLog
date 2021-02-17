@@ -15,6 +15,7 @@
 \usepackage{float}% used with \begin{figure}[H] to set fixed position.
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{colortbl,xcolor}
 \usepackage{imakeidx}% create index for later looking-up
 \usepackage{ifthen}% conditional statements (if then else)
 \usepackage{hyperref}
@@ -26,10 +27,8 @@
 %======================================================
 % configurations
 %======================================================
-\makeindex % create index for later looking-up.
-%
-% set \noindent for entrie file
-\setlength\parindent{0pt}
+\makeindex % create index for later looking-up
+\setlength\parindent{0pt}% set \noindent for entrie file
 %
 % define variable for language:
 %   de : Deutsch
@@ -68,9 +67,8 @@
 %======================================================
 % define new environments
 %======================================================
-\newtheorem{definition}{Definition}[section]% numbered due to [section]
-%
 \theoremstyle{mytheoremstyle}% set theorem style
+\newtheorem{definition}{Definition}[section]% numbered due to [section]
 \newtheorem{theorem}[definition]{Theorem}% numbered due to [defintion]
 %
 % define new environment for Example. First argument #1

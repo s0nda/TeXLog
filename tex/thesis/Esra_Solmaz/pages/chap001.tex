@@ -2,7 +2,9 @@
 % chap001.tex
 %
 
+%======================================================
 \chapter{Primzahlen}
+%======================================================
 
 %======================================================
 \section{Primzahlbegriff und geschichtliche Aspekte}
@@ -10,7 +12,7 @@
 \begin{definition}[Primzahl]
 ``Eine Primzahl ist eine natürliche Zahl $p > 1$, die nur 
 die trivialen Teiler besitzt, d.h. deren einzige Teiler
-1 und sie selbst sind'' \cite{schichlsteinbauer}, S. 23.
+1 und sie selbst sind'' (\cite{schichlsteinbauer}, S.23).
 \end{definition}
 \vspace{-.5cm}
 
@@ -43,9 +45,9 @@ Theorien nicht beweisen.
 
 ``Um 300 v. Chr. veröffentlichte Euklid die Bücher der
 ”Elemente“, die viele wichtige Erkenntnisse der Primzahlforschung
-mit korrekt geführten Beweisen beinhalteten'' (vgl. Sas
-2002-2008, S. 4). Einer der wichtigen Beweise sind die
-unendlich vielen Primzahlen.
+mit korrekt geführten Beweisen beinhalteten''
+(vgl. \cite{sasgabor}, S.4).
+Einer der wichtigen Beweise sind die unendlich vielen Primzahlen.
 
 \begin{theorem}[Satz von Euklid]
 Es gibt unendlich viele Primzahlen.
@@ -66,7 +68,7 @@ die $m$ teilt. ``Dies ist jedoch nicht möglich, da $m$
 durch keine der Primzahlen $p_i$ $(1 \leq i \leq n)$ teilbar
 ist. (Es bleibt ja immer ein Rest von 1)''. Die logische
 Schlusskette endet in einem Widerspruch
-(vgl. \cite{schichlsteinbauer}, S. 25).
+(vgl. \cite{schichlsteinbauer}, S.25).
 \end{proof}
 
 \newpage
@@ -85,7 +87,7 @@ hätten und man dachte auch, dass sie das Konzept der
 Primzahlen nie verfasst haben.
 
 Diese Vermutung wird als Chinesische Hypothese bezeichnet
-(vgl. Sas 2002-2008, S.4ff). 
+(vgl. \cite{sasgabor}, S.4ff). 
 \vspace*{.4cm}
 
 \textbf{SIEB DES ERATOSTHENES}
@@ -94,7 +96,7 @@ Um 200 v. Chr. erfand Eratosthenes einen Algorithmus zur
 Anfertigung einer Tabelle mit allen Primzahlen bis zu
 einer bestimmten Zahl. Seine Methode wurde nach ihm
 benannt und sie heißt heute ''Sieb des Eratosthenes``
-(vgl. Sas 2002-2008, S.5).
+(vgl. \cite{sasgabor}, S.5).
 \vspace*{.4cm}
 
 \underline{Kurze Erklärung zur Funktionsweise des Algorithmus}
@@ -111,7 +113,7 @@ Liste überbleiben, die markiert sind bzw. die keine Teiler
 (abgesehen von $1$ und sich selbst) aufweisen. Diese Zahlen
 sind die Primzahlen. Alle durchgestrichenen Zahlen sind die
 Vielfachen von den markierten Zahlen und diese sind teilbar
-(vgl. Sas 2002-2008, S.5).
+(vgl. \cite{sasgabor}, S.5).
 
 \begin{figure}[H]
   \centering
@@ -126,7 +128,7 @@ gedacht, jedoch ist sie als Primzahltest nicht geeignet.
 ''Um die Primalität einer Zahl $n$ mit dem Sieb von
 Eratosthenes festzustellen, muß die Primalität aller
 Zahlen kleiner als $n$ festgestellt werden``
-(Sas 2002-2008, S.5).
+(siehe \cite{sasgabor}, S.5).
 \vspace*{.4cm}
 
 \textbf{MERSENNEZAHLEN UND DER KLEINE FERMATSCHE SATZ}
@@ -146,7 +148,7 @@ wieder eine Primzahl ist, wurde 1536 entdeckt
 ($211 - 1 = 2047 = 23 \cdot 89$)``. Im Jahr 1588 wurde von
 Cataldi bewiesen, dass $2^{19} - 1$ eine Primzahl ist
 und sie blieb ungefähr 200 Jahre lang die größte Primzahl
-(vgl. Sas 2002-2008, S.6f).
+(vgl. \cite{sasgabor}, S.6f).
 
 Zu Beginn des 17. Jahrhundert hat Fermat die erste
 wirklich andeutende Entdeckung seit Eratosthenes gemacht
@@ -158,7 +160,7 @@ $a$, daß $a^p \equiv a \mskip-5mu\mod p$. Dieser Satz unterstütz als
 Grundidee viele weitere Erkenntnisse in der Zahlentheorie
 und zahlreiche von Computern verwendete Verfahren zum
 Überprüfen von Primzahlen beziehen sich auf diesen Satz
-(vgl. Sas 2002-2008, S.6f).
+(vgl. \cite{sasgabor}, S.6f).
 \vspace*{.4cm}
 
 \textbf{DIE ZEIT AB DEM 20. JAHRHUNDERT}
@@ -173,7 +175,7 @@ Finden von Primzahlen verwendete und $M_{2281}$ war die
 größte Primzahl, die er fand. Diese Entdeckung passierte
 im Jahr 1952. In den weiteren Jahren bzw. in der Folgezeit
 sind alle paar Jahre ein neuer Rekord gefunden worden
-(vgl. Sas 2002-2008, S.7f).
+(vgl. \cite{sasgabor}, S.7f).
 
 Im Rahmen des Projekts Great Internet Mersenne Prime Search
 (GIMPS) ist im Jahr 2018 die aktuell größte Primzahl
@@ -182,9 +184,9 @@ IT-Fachmann Patrick Laroche identifizierte die neue größte
 Primzahl mit ungefähr 25 Millionen Stellen und diese Zahl
 ist um mehr als 1,5 Millionen Ziffern länger als der
 bisherige Rekordhalter
-(vgl. ''Neue größte Primzahl hat 25 Millionen Stellen``, 2018)
-
+(vgl. \cite{derstandard}, 2018)
 \newpage
+
 
 %======================================================
 \section{Primzahltests}
@@ -198,7 +200,7 @@ bedeutend sind.
 Jedoch gibt es keine Konstruktionsmethode hinsichtlich der
 Primzahlen, etwa wie eine effizient berechenbare Funktion
 $f : \mathbb{N} \to \mathbb{P}$ mit unendlicher Bildmenge
-(vgl. Karpfinger \& Kiechle 2010, S.141).
+(vgl. \cite{karpfingerkiechle}, S.141).
 In diesem Abschnitt ist $\mathbb{P}$ die Menge aller
 Primzahlen.
 
@@ -210,14 +212,14 @@ festgestellt, dass die Zahl $n$ keine Primzahl ist, so
 wird eine zu $n$ nächstgelegene ungerade natürliche Zahl
 überprüft. Der Primzahlsatz garantiert dabei, dass mit
 hoher Wahrscheinlichkeit in der Nähe von $n$ eine Primzahl
-liegt (vgl. Karpfinger \& Kiechle 2010, S.141).
+liegt (vgl. \cite{karpfingerkiechle}, S.141).
 Des Weiteren definiert der Primzahlsatz eine asymptotische
 Aussage über die Anzahl der Primzahlen (vgl. Schürz 2016, S.3).
 
 \begin{theorem}[Primzahlsatz]
 Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
 \( \lim\limits_{x\to\infty} \pi(x)\cdot \frac{\log(x)}{x} = 1 \)
-(vgl. Karpfinger \& Kiechle 2010, S.142).
+(vgl. \cite{karpfingerkiechle}, S.142).
 \end{theorem}
 
 \textbf{ARTEN VON PRIMZAHLTESTS}
@@ -227,10 +229,10 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     ob eine Zahl zusammengesetzt oder prim ist. Des Weiteren
     beziehen sich diese Tests auf Aussagen der Art ''$n$ ist
     genau dann eine Primzahl, falls folgende Bedingungen
-    gelten`` (vgl. Sas 2002-2008, S.10). Anhand der echten
+    gelten`` (vgl. \cite{sasgabor}, S.10). Anhand der echten
     Primzahltests wie beispielsweise die Probedivision,
     Sieb des Eratosthenes und Sieb von Atkin können mögliche
-    Teiler einfach gefunden werden (vgl. Primzahltests, 2021).
+    Teiler einfach gefunden werden (vgl. \cite{primzahltest}, 2021).
     
  \item \textbf{Tests auf Zusammengesetztheit}\\
     Bestätigt ein Test dieser Form das Ergebnis
@@ -241,13 +243,13 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     Die Tests auf Zusammengesetztheit beziehen sich auf die
     Aussagen der Art ''Gelten bestimmte Bedingungen, ist $n$
     zusammengesetzt`` bzw. ''Ist $n$ prim, so gilt das
-    Folgende`` (vgl. Sas 2002-2008, S.11).
+    Folgende`` (vgl. \cite{sasgabor}, S.11).
     
     Eine natürliche Zahl $n$ wird zusammengesetzt bezeichnet,
     wenn es Zahlen $a,b \in\mathbb{N} \land a,b > 1$ vorhanden
     sind und $n = a\cdot b$ ist. Somit sind die
     zusammengesetzten Zahlen keine Primzahlen
-    (vgl. Karpfinger \& Kiechle 2010, S.141).
+    (vgl. \cite{karpfingerkiechle}, S.141).
     
  \item \textbf{Tests auf Primalität}\\
     Eine weitere Variante hinsichtlich der Primzahltests
@@ -256,19 +258,19 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     beziehen sich auf die Aussagen der Art ''Gelten bestimmte
     Bedingungen, so ist $n$ prim`` bzw. ''Ist $n$
     zusammengesetzt, so gilt das Folgende``
-    (vgl. Sas 2002-2008, S.11).
+    (vgl. \cite{sasgabor}, S.11).
     
  \item \textbf{Probabilistische Tests}\\
     Die probabilistische Primzahltests bauen auf Tests auf
     Zusammengesetztheit bzw. auf Test auf Primalität auf
-    (vgl. Sas 2002-2008, S.11). Diese Tests sind gegebenfalls
+    (vgl. \cite{sasgabor}, S.11). Diese Tests sind gegebenfalls
     im Vergleich zu anderen Tests schneller, aber nicht
     vollkommen sicher. Falls eine Zahl $n$ diesen Tests besteht,
     so ist sie mit großer Wahrscheinlichkeit eine Primazahl.
     Fällt eine Zahl bei diesen Tests durch, so ist sie sicher
-    zusammengesetzt (vgl. Forster 2015, S. 92). Beispiele für
+    zusammengesetzt (vgl. \cite{forster}, S. 92). Beispiele für
     probabilistische Tests sind der Fermat-Tests und
-    Miller-Rabin-Test (vgl. Primzahltests, 2021).
+    Miller-Rabin-Test (vgl. \cite{primzahltest}, 2021).
     
  \item \textbf{Deterministische Tests}\\
     Eine weitere Form von Tests sind die deterministischen
@@ -276,7 +278,7 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     richtiges Ergebnis liefert bzw. wenn der Test
     ''$n \in\mathbb{P}$`` als Ergebnis ausgibt. So ist die
     Zahl $n$ auch ganz sicher eine Primzahl
-    (vgl. Karpfinger \& Kiechle 2010, S.141).
+    (vgl. \cite{karpfingerkiechle}, S.141).
     
     Der Unterschied hinsichtlich der oben erwähnten Tests
     liegt an ihrer Komplexität und ihrer Genauigkeit.
@@ -296,7 +298,7 @@ Es gilt \( \pi (x) \sim \frac{x}{\log(x)}\), d.h.
     Bei diesem Test kann die Aussage ''$n \in\mathbb{P}$``
     mit einer gewissen, kontrollierbar kleinen
     Fehlerwahrscheinlichkeit falsch sein
-    (vgl. Karpfinger \& Kiechle 2010, S.141).\\
+    (vgl. \cite{karpfingerkiechle}, S.141).\\
     Aufgrund der eindeutigen Vorstellung werden in den
     weiteren Abschnitten zwei Primzahltests kurz näher
     dargestellt. Es wird (neben dem Sieb von Eratosthenes)
@@ -319,21 +321,22 @@ so gibt es einen Teiler von $n$ und somit ist die Zahl $n$
 keine Primzahl. Des Weiteren werden die kleinen Primzahlen
 in einer Liste geführt und diese Liste ist so geformt,
 dass alle Elemente in 16-Bit-Wörter gespeichert werden können
-(vgl. Karpfinger \& Kiechle 2010, S.142).
+(vgl. \cite{karpfingerkiechle}, S.142).
 
 Im Falle eines negativen Ergebnisses, d.h. falls der Test
 negativ ausfällt und keine kleinen Primteiler bestätigt
 werden, dann wird mit einem anderen Verfahren fortgesetzt
 und heutzutage ist diese Methodik meistens der 
-Miller-Rabin-Test (vgl. Karpfinger \& Kiechle 2010, S.142).
+Miller-Rabin-Test (vgl. \cite{karpfingerkiechle}, S.142).
 
 \begin{example}
 Die Zahl $n = 253$ wird mit Rest nacheinander durch die
 Primzahlen $2, 3, 5, 7$ und $11$ geteilt und es wird die
 Zerlegung festgestellt, dass $n = 11\cdot 23$ ist
-(vgl. Karpfinger \& Kiechle 2010, S.142).
+(vgl. \cite{karpfingerkiechle}, S.142).
 \end{example}
 \vspace{.3cm}
+
 
 \textbf{DER FERMAT-TEST}
 
@@ -342,7 +345,7 @@ von Fermat.
 \begin{theorem}[Kleiner Fermatscher Satz]
 ''Sei $p$ eine Primzahl und $a$ eine beliebige natürliche
 Zahl mit $ggT(a,p)=1$, so gilt $\; a^{p-1} \;\equiv\; 1\mod p$“
-(Sas 2002-2008, S. 14).
+(\cite{sasgabor}, S. 14).
 \end{theorem}
 
 Wird dieser Ausdruck mit $a$ multipliziert, so erhält man
@@ -351,7 +354,7 @@ Wird dieser Ausdruck mit $a$ multipliziert, so erhält man
 \]
 Der Grund dafür ist, dass $ggT(a,p)=1$ und somit ist der
 erste Ausdruck identisch zum zweiten Ausdruck
-(vgl. Sas, 2008-2012, S.14).
+(vgl. \cite{sasgabor}, S.14).
 
 Weitere Hintergründe hinsichtlich dieses Satzes werden
 in der Arbeit nicht näher vorgestellt.

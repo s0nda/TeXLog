@@ -46,14 +46,11 @@
 \mainmatter{}% set page numbering in Arabic style.
 
 %======================================================
-% Chapter 1
+% Chapters
 %======================================================
 \input{pages/chap001}
-
-%======================================================
-% Chapter 2
-%======================================================
 \input{pages/chap002}
+\input{pages/final}
 
 %======================================================
 % Add appendix (Anhang)
@@ -62,6 +59,33 @@
 
 %======================================================
 % Print the index list for later looking-up
+%
+% 1. Import package {makeindex}:
+%       \usepackage{makeindex}
+%
+% 2. Add keyword "\makeindex" before/outside
+%    "\begin{document}".
+%
+% 3. Add keyword "\printindex" within "\begin{document}".
+%
+% 4. Use keyword "\index{<entry>}" following a word
+%    to add entry to index:
+%       <Word>\index{<entry>}
+%
+% 5. Example:
+%       \documentclass{article}
+%       \usepackage[ngerman]{babel}
+%       \usepackage{makeidx}
+%       \makeindex
+%
+%       \begin{document}
+%       ...
+%           word1 word2 ... wordN\index{entry}
+%       ...
+%       \printindex
+%       ...
+%       \end{document}
+%
 %======================================================
 \printindex
 
