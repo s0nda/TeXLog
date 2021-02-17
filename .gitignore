@@ -3,6 +3,7 @@
 /tex/thesis/Esra_Solmaz/*.bbl
 /tex/thesis/Esra_Solmaz/*.bcf
 /tex/thesis/Esra_Solmaz/*.blg
+/tex/thesis/Esra_Solmaz/*.dvi
 /tex/thesis/Esra_Solmaz/*.gz
 /tex/thesis/Esra_Solmaz/*.idx
 /tex/thesis/Esra_Solmaz/*.ilg
@@ -10,8 +11,10 @@
 /tex/thesis/Esra_Solmaz/*.lof
 /tex/thesis/Esra_Solmaz/*.log
 /tex/thesis/Esra_Solmaz/*.out
+/tex/thesis/Esra_Solmaz/*.out.ps
 /tex/thesis/Esra_Solmaz/*.run.xml
 /tex/thesis/Esra_Solmaz/*.synctex
+/tex/thesis/Esra_Solmaz/*.synctex(busy)
 /tex/thesis/Esra_Solmaz/*.synctex.gz
 /tex/thesis/Esra_Solmaz/*.toc
 # Ignore files in ./tex/thesis/vorlage/ folder
@@ -19,6 +22,7 @@
 /tex/thesis/vorlage/*.bbl
 /tex/thesis/vorlage/*.bcf
 /tex/thesis/vorlage/*.blg
+/tex/thesis/vorlage/*.dvi
 /tex/thesis/vorlage/*.gz
 /tex/thesis/vorlage/*.idx
 /tex/thesis/vorlage/*.ilg
@@ -26,9 +30,11 @@
 /tex/thesis/vorlage/*.lof
 /tex/thesis/vorlage/*.log
 /tex/thesis/vorlage/*.out
+/tex/thesis/vorlage/*.out.ps
 /tex/thesis/vorlage/*.pdf
 /tex/thesis/vorlage/*.run.xml
 /tex/thesis/vorlage/*.synctex
+/tex/thesis/vorlage/*.synctex(busy)
 /tex/thesis/vorlage/*.synctex.gz
 /tex/thesis/vorlage/*.toc
 # Except the .gitignore file itself
