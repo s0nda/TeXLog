@@ -55,6 +55,24 @@ wobei die Option (Modifier) `-q` für *quite* bzw.
 *aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
 aktuell befindet, steht.
 
+Alle (gezippten) Dateien werden in dem Ordner `base` im
+selben Verzeichnis extrahiert. Enthalten in 'base' sind
+die Unterordner `doc`, `lua`, `source` und `tex` mit folgender
+Struktur:
+
+> base/
+>  |
+>  +-- doc/
+>  +-- lua/
+>  +-- source/
+>  +-- tex/
+>  +-- INSTALL_NOTES
+>  +-- README.md
+
+
+
+
+
 ______________________________________________________________
 
 ### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
