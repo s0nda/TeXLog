@@ -18,16 +18,44 @@ TeX-Pakets hin und fordert das nachträgliche Installieren
 dessen an.
 Dabei steht `<package_name>` als Platzhalter für den Namen
 des (fehlenden) Pakets.
-Zum Beispiel, fehlt das Paket `tikz`, lautet die
+Zum Beispiel, wird das Paket `tikz` vermisst, lautet die
 Fehlermeldung:
 
-`File `tikz.sty' not found. ^^M`
+    `File `tikz.sty' not found. ^^M`
 
 In diesem Fahll muss das fehlende Paket `tikz` nachträglich
 installiert werden.
 
 
-1.1. 
+#### 1.1. Finden und Herunterladen des vermissten Pakets ####
+
+Das fehlende Paket kann auf der CTAN-Seite gefunden und
+herunterladen werden:
+
+[https://www.ctan.org/pkg](https://www.ctan.org/pkg)
+
+Wird z.B. das Paket 'tikz' vermisst, gibt man den Paketnamen
+'tikz' im Suchfeld auf der o.g. Seite ein und klickt auf
+'Suchen'. Anschließend folgt man dem (meist ersten) Link
+zum 'Package tikz' und kann die *.zip Datei, hier 
+'base.zip', herunterladen.
+
+#### 1.2. Extrahieren des Pakets ####
+
+Angenommen, das Paket z.B. 'base.zip', welches die benötigte
+Datei 'tikz.sty' enthält, ist unter dem Ordner
+'/home/<user>/Downloads' gespeichert. Extrahiert wird die
+gezippte Datei 'base.zip' im selben Ordner mitteils
+folgenden Befehls:
+
+    $ sudo unzip -q base.zip -d .
+    
+wobei die Option (Modifier) "-q" für *quite* bzw.
+*stilles Ausführen*, "-d" für *dicrectory* bzw. *Verzeichnis*
+(nach welchem extrahiert wird), und "." (dot, Punkt) für
+*aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
+aktuell befindet, steht.
+
 
 ### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
 
