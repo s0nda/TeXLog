@@ -44,7 +44,7 @@ zum `Package tikz` und kann die *.zip Datei, hier
 
 Angenommen, das Paket z.B. `base.zip`, welches die benötigte
 Datei `tikz.sty` enthält, ist unter dem Ordner
-`/home/\<user\>/Downloads` gespeichert. Extrahiert im selben
+`/home/<user>/Downloads` gespeichert. Extrahiert im selben
 Ordner wird diese Datei `base.zip` mittels folgenden Befehls:
 
     $ sudo unzip -q base.zip -d .
@@ -55,6 +55,8 @@ wobei die Option (Modifier) `-q` für *quite* bzw.
 *aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
 aktuell befindet, steht.
 
+
+=============================================================
 
 ### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
 
