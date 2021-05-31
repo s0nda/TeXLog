@@ -114,7 +114,28 @@ oder:
        
        $ pdflatex imakeidx.ins
        $ pdflatex imakeidx.dtx
-       
+
+In jedem Fall wird eine Installationsdatei `imakeidx.sty`
+erstellt.
+
+    root (/)
+     |
+     +-- home
+          |
+          +-- <user>
+                |
+                +-- Downloads/
+                       |
+                       +-- imakeidx.zip
+                       +-- imakeidx/
+                            |
+                            +-- imakeidx.dtx
+                            +-- (imakeidx.ins)
+                            +-- imakeidx.sty
+                            +-- imakeidx.pdf
+                            +-- manifest.txt
+                            +-- README
+                               
 1.3.2. Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
        einen neuen Ordner namens `imakeidx`:
            
