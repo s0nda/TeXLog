@@ -92,12 +92,11 @@ Um das Paket `imakeidx` in das bestehende TeX-System zu
 integrieren bzw. installieren, sind folgende zwei Schritte
 durchzuführen:
 
-    1.3.1. Erstellt im  \
-           `/usr/share/texlive/texmf-dist/tex/latex/`
-           einen Ordner `imakeidx`:
+1.3.1. Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
+       einen neuen Ordner namens `imakeidx`:
            
-           $ cd /usr/share/texlive/texmf-dist/tex/latex/
-           $ sudo mkdir imakeid
+       $ cd /usr/share/texlive/texmf-dist/tex/latex/
+       $ sudo mkdir imakeid
 
 
 ______________________________________________________________________
