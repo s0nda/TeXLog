@@ -49,7 +49,7 @@ Ordner wird die Datei 'base.zip' mittels des folgenden Befehls:
 
     $ sudo unzip -q base.zip -d .
     
-wobei die Option (Modifier) `-q' für *quite* bzw.
+wobei die Option (Modifier) `-q` für *quite* bzw.
 *stilles Ausführen*, "-d" für *dicrectory* bzw. *Verzeichnis*
 (nach welchem extrahiert wird), und "." (dot, Punkt) für
 *aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
