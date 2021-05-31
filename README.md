@@ -11,7 +11,7 @@ Meist nach einer frischen Neuinstallation des Betriebssystems
 bekommt man während der Kompilierung seiner TeX-Datei die
 folgende Fehlermeldung:
 
-    `File '<package_name>.sty' not found. ^^M`
+    File '<package_name>.sty' not found. ^^M
 
 Diese Fehlermeldung weist auf das Fehlen eines bestimmten
 TeX-Pakets hin und fordert das nachträgliche Installieren
@@ -21,7 +21,7 @@ des (fehlenden) Pakets.
 Zum Beispiel, wird das Paket `tikz` vermisst, lautet die
 Fehlermeldung:
 
-    `File 'tikz.sty' not found. ^^M`
+    File 'tikz.sty' not found. ^^M
 
 In diesem Fahll muss das fehlende Paket `tikz` nachträglich
 installiert werden.
@@ -60,14 +60,14 @@ selben Verzeichnis extrahiert. Enthalten in 'base' sind
 die Unterordner `doc`, `lua`, `source` und `tex` mit folgender
 Struktur:
 
-> base/
->  |
->  +-- doc/
->  +-- lua/
->  +-- source/
->  +-- tex/
->  +-- INSTALL_NOTES
->  +-- README.md
+    base/
+     |
+     +-- doc/
+     +-- lua/
+     +-- source/
+     +-- tex/
+     +-- INSTALL_NOTES
+     +-- README.md
 
 
 
