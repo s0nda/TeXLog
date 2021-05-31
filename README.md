@@ -11,7 +11,18 @@ Meist nach einer frischen Neuinstallation des Betriebssystems
 bekommt man während der Kompilierung seiner TeX-Datei die
 folgende Fehlermeldung:
 
-`File <pacakge_name>.sty not found. ^^M`
+`File <package_name>.sty not found. ^^M`
+
+Diese Fehlermeldung weist auf das Fehlen eines bestimmten
+TeX-Pakets hin und fordert das nachträgliche Installieren
+dessen an.
+Dabei steht `<package_name>` als Platzhalter für den Namen
+des (fehlenden) Pakets.
+Zum Beispiel, fehlt das Paket `tikz`, lautet die
+Fehlermeldung:
+
+`File ``tikz.sty' not found. ^^M`
+
 
 #### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ####
 
