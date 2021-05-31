@@ -55,8 +55,7 @@ wobei die Option (Modifier) `-q` für *quite* bzw.
 *aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
 aktuell befindet, steht.
 
-
-=============================================================
+______________________________________________________________
 
 ### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
 
