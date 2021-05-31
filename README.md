@@ -51,7 +51,7 @@ Ordner `/home/<user>/Downloads/` gespeichert.
 Extrahiert im selben Ordner (`.`) wird diese Datei
 `imakeidx.zip` mittels der Befehlszeile:
 
-    $ sudo unzip -q base.zip -d .
+    $ sudo unzip -q imakeidx.zip -d .
     
 wobei die Option (Modifier) `-q` für *quite* bzw.
 *stilles Ausführen*, `-d` für *dicrectory* bzw. *Verzeichnis*
@@ -89,10 +89,33 @@ Ordner `/usr/share/texlive/texmf-dist/tex/latex/`
 installiert.
 
 Um das Paket `imakeidx` in das bestehende TeX-System zu
-integrieren bzw. installieren, sind folgende zwei Schritte
+integrieren bzw. installieren, sind folgende drei Schritte
 durchzuführen:
 
-1.3.1. Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
+1.3.1. Generiert aus der mitgelieferten `.ins` (bzw.
+       `.dtx`) Datei die für die Installation notwendige
+       `.sty` Datei, mit Hilfe des `tex` Befehls:
+       
+       $ cd /home/<user>/Downloads/imakeidx/
+       $ tex imakeidx.ins
+       
+       Falls die Datei `imakeidx.ins` nicht vorliegt,
+       wird stattdessen `imakeidx.dtx` verwendet:
+       
+       $ tex imakeidx.dtx
+       
+       In einigen Fällen ist auch `latex`- oder `pdflatex`-
+       Befehl notwendig:
+       
+       $ latex imakeidx.ins
+       $ latex imakeidx.dtx
+       
+       oder
+       
+       $ pdflatex imakeidx.ins
+       $ pdflatex imakeidx.dtx
+       
+1.3.2. Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
        einen neuen Ordner namens `imakeidx`:
            
        $ cd /usr/share/texlive/texmf-dist/tex/latex/
