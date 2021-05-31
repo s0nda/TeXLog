@@ -32,7 +32,7 @@ nachträglich installiert werden.
 Die fehlenden Pakete kann auf der CTAN-Seite gefunden und
 herunterladen werden:
 
-    [https://www.ctan.org/pkg](https://www.ctan.org/pkg)
+  [https://www.ctan.org/pkg](https://www.ctan.org/pkg)
 
 Wird z.B. das Paket `imakeidx` vermisst, gibt man den Paketnamen
 'imakeidx' im Suchfeld auf der o.g. Seite ein und klickt auf
