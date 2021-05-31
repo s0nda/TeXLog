@@ -131,7 +131,7 @@ erstellt.
                             |
                             +-- imakeidx.dtx
                             +-- (imakeidx.ins)
-                            +-- **imakeidx.sty**
+                            +-- imakeidx.sty   <====
                             +-- imakeidx.pdf
                             +-- manifest.txt
                             +-- README
