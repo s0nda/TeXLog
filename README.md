@@ -4,14 +4,14 @@
 
 ## FAQ ##
 
-#### 1. File `<package_name>.sty` not found. ^^M ####
+### 1. File `<package_name>.sty` not found. ^^M ###
 
 Meist nach einer frischen Neuinstallation des Betriebssystems
 (Windows, Linux etc.) und der TeX-Programme (TeXLive/MikTeX)
 bekommt man während der Kompilierung seiner TeX-Datei die
 folgende Fehlermeldung:
 
-`File <package_name>.sty not found. ^^M`
+`File `<package_name>.sty' not found. ^^M`
 
 Diese Fehlermeldung weist auf das Fehlen eines bestimmten
 TeX-Pakets hin und fordert das nachträgliche Installieren
@@ -21,10 +21,15 @@ des (fehlenden) Pakets.
 Zum Beispiel, fehlt das Paket `tikz`, lautet die
 Fehlermeldung:
 
-`File ``tikz.sty' not found. ^^M`
+`File `tikz.sty' not found. ^^M`
+
+In diesem Fahll muss das fehlende Paket `tikz` nachträglich
+installiert werden.
 
 
-#### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ####
+1.1. 
+
+### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
 
 In LaTeX wird der Befehl `\cfrac` oder `\dfrac` verwendet, um
 Bruchzahlen in größerer Schriftgröße darzustellen.
