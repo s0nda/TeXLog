@@ -44,13 +44,12 @@ zum 'Package tikz' und kann die *.zip Datei, hier
 
 Angenommen, das Paket z.B. 'base.zip', welches die benötigte
 Datei 'tikz.sty' enthält, ist unter dem Ordner
-'/home/\<user\>/Downloads' gespeichert. Extrahiert wird die
-gezippte Datei 'base.zip' im selben Ordner mitteils
-folgenden Befehls:
+'/home/\<user\>/Downloads' gespeichert. Extrahiert im selben
+Ordner wird die Datei 'base.zip' mittels des folgenden Befehls:
 
     $ sudo unzip -q base.zip -d .
     
-wobei die Option (Modifier) "-q" für *quite* bzw.
+wobei die Option (Modifier) `-q' für *quite* bzw.
 *stilles Ausführen*, "-d" für *dicrectory* bzw. *Verzeichnis*
 (nach welchem extrahiert wird), und "." (dot, Punkt) für
 *aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
