@@ -92,25 +92,25 @@ Um das Paket `imakeidx` in das bestehende TeX-System zu
 integrieren bzw. installieren, sind folgende drei Schritte
 durchzuführen:
 
-1.3.1. Generiert aus der mitgelieferten `.ins` (bzw.
+1.3.1. Generiert aus der mitgelieferten `.ins`- (bzw.
        `.dtx`) Datei die für die Installation notwendige
-       `.sty` Datei, mit Hilfe des `tex` Befehls:
+       `.sty`-Datei, mit Hilfe des `tex` Befehls:
        
        $ cd /home/<user>/Downloads/imakeidx/
        $ tex imakeidx.ins
        
-       Falls die Datei `imakeidx.ins` nicht vorliegt,
-       wird stattdessen `imakeidx.dtx` verwendet:
+Falls die Datei `imakeidx.ins` nicht vorliegt,
+wird stattdessen `imakeidx.dtx` verwendet:
        
        $ tex imakeidx.dtx
        
-       In einigen Fällen ist auch `latex`- oder `pdflatex`-
-       Befehl notwendig:
+In einigen Fällen ist auch `latex`- oder `pdflatex`-
+Befehl notwendig:
        
        $ latex imakeidx.ins
        $ latex imakeidx.dtx
        
-       oder
+oder:
        
        $ pdflatex imakeidx.ins
        $ pdflatex imakeidx.dtx
