@@ -11,7 +11,7 @@ Meist nach einer frischen Neuinstallation des Betriebssystems
 bekommt man während der Kompilierung seiner TeX-Datei die
 folgende Fehlermeldung:
 
-  `File '<package_name>.sty' not found. ^^M`
+    `File '<package_name>.sty' not found. ^^M`
 
 Diese Fehlermeldung weist auf das Fehlen eines bestimmten
 TeX-Pakets hin und fordert das nachträgliche Installieren
@@ -21,7 +21,7 @@ des (fehlenden) Pakets.
 Zum Beispiel, wird das Paket `tikz` vermisst, lautet die
 Fehlermeldung:
 
-  `File 'tikz.sty' not found. ^^M`
+    `File 'tikz.sty' not found. ^^M`
 
 In diesem Fahll muss das fehlende Paket `tikz` nachträglich
 installiert werden.
@@ -47,7 +47,7 @@ Datei `tikz.sty` enthält, ist unter dem Ordner
 `/home/\<user\>/Downloads` gespeichert. Extrahiert im selben
 Ordner wird diese Datei `base.zip` mittels folgenden Befehls:
 
-  $ sudo unzip -q base.zip -d .
+    $ sudo unzip -q base.zip -d .
     
 wobei die Option (Modifier) `-q` für *quite* bzw.
 *stilles Ausführen*, `-d` für *dicrectory* bzw. *Verzeichnis*
