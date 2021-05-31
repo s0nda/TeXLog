@@ -4,7 +4,14 @@
 
 ## FAQ ##
 
-#### 1. File `tikz.sty` not found. ^^M ####
+#### 1. File `<package_name>.sty` not found. ^^M ####
+
+Meist nach einer frischen Neuinstallation des Betriebssystems
+(Windows, Linux etc.) und der TeX-Programme (TeXLive/MikTeX)
+bekommt man während der Kompilierung seiner TeX-Datei die
+folgende Fehlermeldung:
+
+`File <pacakge_name>.sty not found. ^^M`
 
 #### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ####
 
