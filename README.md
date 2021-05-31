@@ -44,7 +44,7 @@ zum 'Package tikz' und kann die *.zip Datei, hier
 
 Angenommen, das Paket z.B. 'base.zip', welches die benötigte
 Datei 'tikz.sty' enthält, ist unter dem Ordner
-'/home/<user>/Downloads' gespeichert. Extrahiert wird die
+'/home/\<user\>/Downloads' gespeichert. Extrahiert wird die
 gezippte Datei 'base.zip' im selben Ordner mitteils
 folgenden Befehls:
 
