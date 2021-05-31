@@ -4,7 +4,9 @@
 
 ## FAQ ##
 
-#### 1. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ####
+#### 1. File `tikz.sty` not found. ^^M ####
+
+#### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ####
 
 In LaTeX wird der Befehl `\cfrac` oder `\dfrac` verwendet, um
 Bruchzahlen in größerer Schriftgröße darzustellen.
