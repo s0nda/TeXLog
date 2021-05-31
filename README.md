@@ -240,9 +240,9 @@ oder
 
 
 
-(https://wiki.ubuntuusers.de/TeX_Live/)[https://wiki.ubuntuusers.de/TeX_Live/]
+[https://wiki.ubuntuusers.de/TeX_Live/](https://wiki.ubuntuusers.de/TeX_Live/)
 
-(https://de.wikipedia.org/wiki/Chmod)[https://de.wikipedia.org/wiki/Chmod]
+[https://de.wikipedia.org/wiki/Chmod](https://de.wikipedia.org/wiki/Chmod)
 
 ______________________________________________________________________
 
