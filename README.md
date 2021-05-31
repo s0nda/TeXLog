@@ -169,14 +169,14 @@ Die Logdatei ist redundant. Wichtig ist lediglich
        $ cd /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
        
        $ sudo chmod a=r *.sty
-       $ suod chmod u+w *.sty
+       $ sudo chmod u+w *.sty
        
 bzw. (mit oktaler Schreibweise):
 
        $ sudo chmod 0644 *.sty
        
 Erklärung:
-- Zeile `sudo chmod a=r *.sty` bewirkt, dass ALLE (*all*, `a`)
+- Die Zeile `sudo chmod a=r *.sty` bewirkt, dass ALLE (*all*, `a`)
   Gruppen (d.h. `a = {u,g,o}` wobei `u = user`, `g = group`,
   `o = others`) das **Lese**recht (`=r`) auf die .sty-Dateien
   (`*.sty`) zugewiesen erhalten.
@@ -184,11 +184,42 @@ Erklärung:
   Die Zugriffsrechte für die Datei `imakeidx.sty` würde nach
   einer solchen Zuweisung wie folgt aussehen:
   
+      $ sudo chmod a=r *.sty
+      $ ls -la
+      -r--r--r--    imakeidx.sty
+      
+- Die Zeile `sudo chmod u+w *.sty` bewirkt, dass ausschließlich
+  BENUTZER (*user*, `u`) zusätzlich (`+`) das **Schreibe**recht
+  (`+w`) auf die .sty-Dateien (`*.sty`) zugewiesen erhalten.
+  
+  Die Zugriffsrechte für die Datei `imakeidx.sty` würde nach
+  einer solchen Zuweisung wie folgt aussehen:
+  
+      $ sudo chmod u+w *.sty
       $ ls -la
       -rw-r--r--    imakeidx.sty
-- Zeile   
 
-
+- Alternativ kann auch durch die *oktale Notation* (`0644`)
+  dieselbe Berechtigung zugewiesen werden.
+  
+      S U G O
+      0 6 4 4
+      
+  Das Sticky-Bit (`S`) soll `0` sein.
+  
+  Das User-Bit (`U`, Benutzer) ist `6` und bedeutet, dass
+  der Benutzer sowohl **lesend** als auch **schreibend**
+  auf die .sty-Dateien zugreifen kann.
+  Denn 6 = 4 (*lesen*) + 2 (*schreibend*).
+  
+  Das Group-Bit (`G`, Gruppe) ist `4` und bedeutet, dass
+  die Gruppe **nur lesend** auf die .sty-Dateien zugreifen
+  kann. Denn 4 = 4 (*lesen*) + 0 (*keine*).
+  
+  Das Others-Bit (`O`, Andere) ist `4` und bedeutet, dass
+  die Anderen **nur lesend** auf die .sty-Dateien zugreifen
+  können. Denn 4 = 4 (*lesen*) + 0 (*keine*).
+  
 1.3.5. Aktualisiert die TeX-Bibliothek, nachdem die
        `*.sty`-Dateien in den entsprechenden Zielordner
        `imakeidx/` kopiert und passende Rechte zugewiesen
@@ -201,7 +232,11 @@ oder
        $ sudo mktexlsr
 
 
-https://wiki.ubuntuusers.de/TeX_Live/
+
+(https://wiki.ubuntuusers.de/TeX_Live/)[https://wiki.ubuntuusers.de/TeX_Live/]
+
+(https://de.wikipedia.org/wiki/Chmod)[https://de.wikipedia.org/wiki/Chmod]
+
 ______________________________________________________________________
 
 ### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
