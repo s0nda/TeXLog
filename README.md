@@ -171,7 +171,7 @@ Die Logdatei ist redundant. Wichtig ist lediglich
        $ sudo chmod a=r *.sty
        $ suod chmod u+w *.sty
        
-bzw.
+bzw. (mit oktaler Schreibweise):
 
        $ sudo chmod 0644 *.sty
        
@@ -179,7 +179,14 @@ Erklärung:
 - Zeile `sudo chmod a=r *.sty` bewirkt, dass ALLE (*all*, `a`)
   Gruppen (d.h. `a = {u,g,o}` wobei `u = user`, `g = group`,
   `o = others`) das **Lese**recht (`=r`) auf die .sty-Dateien
-  zugewiesen bekommen.
+  (`*.sty`) zugewiesen erhalten.
+  
+  Die Zugriffsrechte für die Datei `imakeidx.sty` würde nach
+  einer solchen Zuweisung wie folgt aussehen:
+  
+      $ ls -la
+      -rw-r--r--    imakeidx.sty
+- Zeile   
 
 
 1.3.5. Aktualisiert die TeX-Bibliothek, nachdem die
