@@ -116,8 +116,10 @@ oder:
        $ pdflatex imakeidx.dtx
 ).
 
-In jedem Fall wird eine Installationsdatei `imakeidx.sty`
-erstellt.
+In jedem Fall werden zwei Dateien, `imakeidx.sty` für
+die Installation und `imakeidx.log` als Logdatei, erstellt.
+Die Logdatei ist redundant. Wichtig ist lediglich
+`imakeidx.sty`.
 
     root (/)
      |
@@ -133,6 +135,7 @@ erstellt.
                             +-- imakeidx.dtx
                             +-- (imakeidx.ins)
                             +-- imakeidx.sty <==========
+                            +-- imakeidx.log
                             +-- imakeidx.pdf
                             +-- manifest.txt
                             +-- README
@@ -143,26 +146,42 @@ erstellt.
        $ cd /usr/share/texlive/texmf-dist/tex/latex/
        $ sudo mkdir imakeidx
        
-1.3.3. Kopiert alle Installationsdateien `*.sty`, in diesem
-       Fall `imakeidx.sty`, von
-       `/home/<user>/Downloads/imakeidx/` nach
+1.3.3. Kopiert alle Installationsdateien (d.h.
+       `imakeidx.sty`, ggf. `imakeidx.dfg` und `imakeidx.def`)
+       von `/home/<user>/Downloads/imakeidx/` nach
        `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`:
        
        $ cd /home/<user>/Downloads/imakeidx/
        
        $ sudo cp *.sty /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
        
-bzw. 
+(falls vorhanden
+
+       $ sudo cp *.dfg /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
+       $ sudo cp *.def /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
+)
        
-       $ sudo cp imakeidx.sty /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
-       
-1.3.4. Weist den `*.sty`-Dateien im Ordner
+1.3.4. Weist allen Installationsdateien (`*.sty`, ggf. `*.dfg`
+       und `*.def`) im Ordner
        `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`
-       entsprechende Rechte zu:
-       
+       entsprechende Rechte (`-rw-r--r--` bzw. `0644`) zu:
+
        $ cd /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
-       $ sudo chmod 
        
+       $ sudo chmod a=r *.sty
+       $ suod chmod u+w *.sty
+       
+bzw.
+
+       $ sudo chmod 0644 *.sty
+       
+Erklärung:
+- Zeile `sudo chmod a=r *.sty` bewirkt, dass ALLE (*all*, `a`)
+  Gruppen (d.h. `a = {u,g,o}` wobei `u = user`, `g = group`,
+  `o = others`) das **Lese**recht (`=r`) auf die .sty-Dateien
+  zugewiesen bekommen.
+
+
 1.3.5. Aktualisiert die TeX-Bibliothek, nachdem die
        `*.sty`-Dateien in den entsprechenden Zielordner
        `imakeidx/` kopiert und passende Rechte zugewiesen
