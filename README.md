@@ -92,6 +92,7 @@ Um das Paket `imakeidx` in das bestehende TeX-System zu
 integrieren bzw. installieren, sind folgende drei Schritte
 durchzuführen:
 
+
 1.3.1. Generiert aus der mitgelieferten `.ins`- (bzw.
        `.dtx`) Datei die für die Installation notwendige
        `.sty`-Datei, mit Hilfe des `tex` Befehls:
@@ -139,12 +140,14 @@ Die Logdatei ist redundant. Wichtig ist lediglich
                             +-- imakeidx.pdf
                             +-- manifest.txt
                             +-- README
+         
                                
 1.3.2. Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
        einen neuen Ordner namens `imakeidx`:
            
        $ cd /usr/share/texlive/texmf-dist/tex/latex/
        $ sudo mkdir imakeidx
+       
        
 1.3.3. Kopiert alle Installationsdateien (d.h.
        `imakeidx.sty`, ggf. `imakeidx.dfg` und `imakeidx.def`)
@@ -161,6 +164,7 @@ Die Logdatei ist redundant. Wichtig ist lediglich
        $ sudo cp *.def /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
 )
        
+       
 1.3.4. Weist allen Installationsdateien (`*.sty`, ggf. `*.dfg`
        und `*.def`) im Ordner
        `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`
@@ -175,7 +179,7 @@ bzw. (mit oktaler Schreibweise):
 
        $ sudo chmod 0644 *.sty
        
-Erklärung:
+**Erklärung:**
 - Die Zeile `sudo chmod a=r *.sty` bewirkt, dass ALLE (*all*, `a`)
   Gruppen (d.h. `a = {u,g,o}` wobei `u = user`, `g = group`,
   `o = others`) das **Lese**recht (`=r`) auf die .sty-Dateien
@@ -199,9 +203,11 @@ Erklärung:
       $ ls -la
       -rw-r--r--    imakeidx.sty
 
-- Alternativ kann auch durch die *oktale Notation* (`0644`)
+- Alternativ kann auch durch die **oktale Notation** (`0644`)
   dieselbe Berechtigung zugewiesen werden.
   
+      $ sudo chmod 0644 *.sty
+      
       S U G O
       0 6 4 4
       
@@ -219,6 +225,7 @@ Erklärung:
   Das Others-Bit (`O`, Andere) ist `4` und bedeutet, dass
   die Anderen **nur lesend** auf die .sty-Dateien zugreifen
   können. Denn 4 = 4 (*lesen*) + 0 (*keine*).
+  
   
 1.3.5. Aktualisiert die TeX-Bibliothek, nachdem die
        `*.sty`-Dateien in den entsprechenden Zielordner
