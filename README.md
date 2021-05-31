@@ -93,9 +93,9 @@ integrieren bzw. installieren, sind folgende drei Schritte
 durchzuführen:
 
 
-1.3.1. Generiert aus der mitgelieferten `.ins`- (bzw.
-       `.dtx`) Datei die für die Installation notwendige
-       `.sty`-Datei, mit Hilfe des `tex` Befehls:
+**1.3.1.** Generiert aus der mitgelieferten `.ins`- (bzw.
+  `.dtx`) Datei die für die Installation notwendige
+  `.sty`-Datei, mit Hilfe des `tex` Befehls:
        
        $ cd /home/<user>/Downloads/imakeidx/
        $ tex imakeidx.ins
@@ -142,17 +142,17 @@ Die Logdatei ist redundant. Wichtig ist lediglich
                             +-- README
          
                                
-1.3.2. Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
-       einen neuen Ordner namens `imakeidx`:
+**1.3.2.** Erstellt im `/usr/share/texlive/texmf-dist/tex/latex/`
+  einen neuen Ordner namens `imakeidx`:
            
        $ cd /usr/share/texlive/texmf-dist/tex/latex/
        $ sudo mkdir imakeidx
        
        
-1.3.3. Kopiert alle Installationsdateien (d.h.
-       `imakeidx.sty`, ggf. `imakeidx.dfg` und `imakeidx.def`)
-       von `/home/<user>/Downloads/imakeidx/` nach
-       `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`:
+**1.3.3.** Kopiert alle Installationsdateien (d.h.
+  `imakeidx.sty`, ggf. `imakeidx.dfg` und `imakeidx.def`)
+  von `/home/<user>/Downloads/imakeidx/` nach
+  `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`:
        
        $ cd /home/<user>/Downloads/imakeidx/
        
@@ -165,10 +165,10 @@ Die Logdatei ist redundant. Wichtig ist lediglich
 )
        
        
-1.3.4. Weist allen Installationsdateien (`*.sty`, ggf. `*.dfg`
-       und `*.def`) im Ordner
-       `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`
-       entsprechende Rechte (`-rw-r--r--` bzw. `0644`) zu:
+**1.3.4.** Weist allen Installationsdateien (`*.sty`, ggf. `*.dfg`
+  und `*.def`) im Ordner
+  `/usr/share/texlive/texmf-dist/tex/latex/imakeidx/`
+  entsprechende Rechte (`-rw-r--r--` bzw. `0644`) zu:
 
        $ cd /usr/share/texlive/texmf-dist/tex/latex/imakeidx/
        
@@ -227,10 +227,10 @@ bzw. (mit oktaler Schreibweise):
   können. Denn 4 = 4 (*lesen*) + 0 (*keine*).
   
   
-1.3.5. Aktualisiert die TeX-Bibliothek, nachdem die
-       `*.sty`-Dateien in den entsprechenden Zielordner
-       `imakeidx/` kopiert und passende Rechte zugewiesen
-       bekommen haben:
+**1.3.5.** Anschließend soll die TeX-Bibliothek aktualisiert
+  werden, nachdem die `*.sty`-Dateien in den entsprechenden
+  Zielordner `imakeidx/` kopiert und passende Rechte zugewiesen
+  bekommen haben:
        
        $ sudo texhash
        
