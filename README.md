@@ -131,7 +131,7 @@ erstellt.
                             |
                             +-- imakeidx.dtx
                             +-- (imakeidx.ins)
-                            +-- imakeidx.sty
+                            +-- **imakeidx.sty**
                             +-- imakeidx.pdf
                             +-- manifest.txt
                             +-- README
@@ -143,6 +143,7 @@ erstellt.
        $ sudo mkdir imakeid
 
 
+https://wiki.ubuntuusers.de/TeX_Live/
 ______________________________________________________________________
 
 ### 2. `\dfrac{}{}`: Problem mit dem zu hoch dargestellten Zähler. ###
