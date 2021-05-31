@@ -13,18 +13,18 @@ folgende Fehlermeldung:
 
     File '<package_name>.sty' not found. ^^M
 
-Diese Fehlermeldung weist auf das Fehlen eines bestimmten
-TeX-Pakets hin und fordert das nachträgliche Installieren
-dessen an.
+Diese Fehlermeldung weist auf das *Fehlen eines bestimmten
+TeX-Pakets* hin und verlangt dessen nachträgliche
+Installation.
 Dabei steht `<package_name>` als Platzhalter für den Namen
 des (fehlenden) Pakets.
-Zum Beispiel, wird das Paket `tikz` vermisst, lautet die
+Zum Beispiel, wird das Paket `imakeidx` vermisst, lautet die
 Fehlermeldung:
 
-    File 'tikz.sty' not found. ^^M
+    File 'imakeidx.sty' not found. ^^M
 
-In diesem Fahll muss das fehlende Paket `tikz` nachträglich
-installiert werden.
+In diesem Fahll muss das fehlende Paket `imakeidx`
+nachträglich installiert werden.
 
 
 #### 1.1. Finden und Herunterladen des vermissten Pakets ####
@@ -32,34 +32,37 @@ installiert werden.
 Die fehlenden Pakete kann auf der CTAN-Seite gefunden und
 herunterladen werden:
 
-[https://www.ctan.org/pkg](https://www.ctan.org/pkg)
+    [https://www.ctan.org/pkg](https://www.ctan.org/pkg)
 
-Wird z.B. das Paket `tikz` vermisst, gibt man den Paketnamen
-'tikz' im Suchfeld auf der o.g. Seite ein und klickt auf
+Wird z.B. das Paket `imakeidx` vermisst, gibt man den Paketnamen
+'imakeidx' im Suchfeld auf der o.g. Seite ein und klickt auf
 'Suchen'. Anschließend folgt man dem (meist ersten) Link
-zum `Package tikz` und kann die *.zip Datei, hier 
-`base.zip`, herunterladen.
+zum `Package imakeidx` und kann die *.zip Datei, hier 
+`imakeidx.zip`, herunterladen.
+
+    [https://www.ctan.org/pkg/imakeidx](https://www.ctan.org/pkg/imakeidx)
+
 
 #### 1.2. Extrahieren des Pakets ####
 
-Angenommen, das Paket z.B. `base.zip`, welches die benötigte
-Datei `tikz.sty` enthält, ist unter dem Ordner
-`/home/<user>/Downloads` gespeichert. Extrahiert im selben
-Ordner (`.`) wird diese Datei `base.zip` mittels folgenden
-Befehls:
+Angenommen, das Paket z.B. `imakeidx.zip`, welches die
+benötigte Datei `imakeidx.sty` enthält, wurde unter dem
+Ordner `/home/<user>/Downloads/` gespeichert.
+Extrahiert im selben Ordner (`.`) wird diese Datei
+`imakeidx.zip` mittels der Befehlszeile:
 
     $ sudo unzip -q base.zip -d .
     
 wobei die Option (Modifier) `-q` für *quite* bzw.
 *stilles Ausführen*, `-d` für *dicrectory* bzw. *Verzeichnis*
 (nach welchem extrahiert wird), und `.` (dot, Punkt) für
-*aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
-aktuell befindet, steht.
+das *aktuelle Verzeichnis*, in welchem die Datei
+`imakeidx.zip` sich aktuell befindet, steht.
 
-Dabei wird in `/home/<user>/Downloads` ein Ordner `base`
-erstellt. Anschließend werden alle (gezippten) Dateien in
-diesen Ordner extrahiert. Es ergibt folgende
-Verzeichnisstruktur:
+Dabei wird durch `-d .` in `/home/<user>/Downloads/` ein
+Ordner `imakeidx` erstellt. Anschließend werden alle
+(gezippten) Dateien in diesen Ordner extrahiert.
+Es ergibt folgende Verzeichnisstruktur:
 
     root (/)
      |
@@ -69,15 +72,33 @@ Verzeichnisstruktur:
                 |
                 +-- Downloads/
                        |
-                       +-- base.zip
-                       +-- base/
+                       +-- imakeidx.zip
+                       +-- imakeidx/
                             |
-                            +-- doc/
-                            +-- lua/
-                            +-- source/
-                            +-- tex/
-                            +-- INSTALL_NOTES
-                            +-- README.md
+                            +-- imakeidx.dtx
+                            +-- (imakeidx.ins)
+                            +-- imakeidx.pdf
+                            +-- manifest.txt
+                            +-- README
+
+
+#### 1.3. Installieren des Pakets ####
+
+Angenommen, alle LaTeX-Pakete wurden standardmäßig im
+Ordner `/usr/share/texlive/texmf-dist/tex/latex/`
+installiert.
+
+Um das Paket `imakeidx` in das bestehende TeX-System zu
+integrieren bzw. installieren, sind folgende zwei Schritte
+durchzuführen:
+
+    1.3.1. Erstellt im
+           `/usr/share/texlive/texmf-dist/tex/latex/`
+           einen Ordner `imakeidx`:
+           
+           $ cd /usr/share/texlive/texmf-dist/tex/latex/
+           $ sudo mkdir imakeid
+
 
 ______________________________________________________________________
 
