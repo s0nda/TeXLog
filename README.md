@@ -11,7 +11,7 @@ Meist nach einer frischen Neuinstallation des Betriebssystems
 bekommt man während der Kompilierung seiner TeX-Datei die
 folgende Fehlermeldung:
 
-`File `<package_name>.sty' not found. ^^M`
+  `File '<package_name>.sty' not found. ^^M`
 
 Diese Fehlermeldung weist auf das Fehlen eines bestimmten
 TeX-Pakets hin und fordert das nachträgliche Installieren
@@ -21,7 +21,7 @@ des (fehlenden) Pakets.
 Zum Beispiel, wird das Paket `tikz` vermisst, lautet die
 Fehlermeldung:
 
-    `File `tikz.sty' not found. ^^M`
+  `File 'tikz.sty' not found. ^^M`
 
 In diesem Fahll muss das fehlende Paket `tikz` nachträglich
 installiert werden.
@@ -29,29 +29,29 @@ installiert werden.
 
 #### 1.1. Finden und Herunterladen des vermissten Pakets ####
 
-Das fehlende Paket kann auf der CTAN-Seite gefunden und
+Die fehlenden Pakete kann auf der CTAN-Seite gefunden und
 herunterladen werden:
 
 [https://www.ctan.org/pkg](https://www.ctan.org/pkg)
 
-Wird z.B. das Paket 'tikz' vermisst, gibt man den Paketnamen
+Wird z.B. das Paket `tikz` vermisst, gibt man den Paketnamen
 'tikz' im Suchfeld auf der o.g. Seite ein und klickt auf
 'Suchen'. Anschließend folgt man dem (meist ersten) Link
-zum 'Package tikz' und kann die *.zip Datei, hier 
-'base.zip', herunterladen.
+zum `Package tikz` und kann die *.zip Datei, hier 
+`base.zip`, herunterladen.
 
 #### 1.2. Extrahieren des Pakets ####
 
-Angenommen, das Paket z.B. 'base.zip', welches die benötigte
-Datei 'tikz.sty' enthält, ist unter dem Ordner
-'/home/\<user\>/Downloads' gespeichert. Extrahiert im selben
-Ordner wird die Datei 'base.zip' mittels des folgenden Befehls:
+Angenommen, das Paket z.B. `base.zip`, welches die benötigte
+Datei `tikz.sty` enthält, ist unter dem Ordner
+`/home/\<user\>/Downloads` gespeichert. Extrahiert im selben
+Ordner wird diese Datei `base.zip` mittels folgenden Befehls:
 
-    $ sudo unzip -q base.zip -d .
+  $ sudo unzip -q base.zip -d .
     
 wobei die Option (Modifier) `-q` für *quite* bzw.
-*stilles Ausführen*, "-d" für *dicrectory* bzw. *Verzeichnis*
-(nach welchem extrahiert wird), und "." (dot, Punkt) für
+*stilles Ausführen*, `-d` für *dicrectory* bzw. *Verzeichnis*
+(nach welchem extrahiert wird), und `.` (dot, Punkt) für
 *aktuelles Verzeichnis*, in welchem die Datei 'base.zip' sich
 aktuell befindet, steht.
 
