@@ -41,6 +41,7 @@ DEFAULT_TEX_FILE=thesis.tex   # main tex file
 #========================================================================================
 _va=                          # general-purpose variable
 _pkg=                         # package name
+_fin=1                        # finish flag
 #========================================================================================
 #
 # FUNCTION (pkg_install)
@@ -87,23 +88,28 @@ function pkg_install () {
   cd "${__pkg}/"
   #
   # Check if file "<package>.sty" does exist.
-  # If no, then check if file "<package>.ins"
+  # If no, then check further if file "<package>.ins"
   # or/and "<package>.dtx" does exist.
   # If yes, then create .sty file (i.e.
   # "<package>.sty") from either .ins- or
   # .dtx file.
-  _va="$(ls -la | grep '.sty')"             # check .sty file
+  #
+  # Option "-1" bedeutet, dass jede aufgelistete Zeile
+  # nur den Dateinamen beinhaltet und keine weitere
+  # Informationen (z.B. Berechtigung, Änderungsdatum etc.).
+  # 
+  _va="$(ls -1 | grep '.sty')"              # check .sty file
   if [ -z "${_va}" ]; then                  # if ${_va} is empty => .sty file not exist
     _va="$(ls -la | grep '.ins')"           # check .ins file
     if [ -z "${_va}" ]; then                # if ${_va} is empty => .ins file not exist
-      _va="$(ls -la | grep '.dtx')"         # check .dtx file
+      _va="$(ls -1 | grep '.dtx')"          # check .dtx file
       if [ -z "${_va}" ]; then              # if ${_va} is empty => .dtx file not exist
         return 1                            # error code (1). Exit function.
-      else
+      else                                  # .dtx file exists
         sudo tex "${__pkg}.dtx"             # create .sty file from .dtx
       fi
-    else
-      sudo tex "${__pkg}.ins"               # create .sty file from .dtx
+    else                                    # .ins file exists
+      sudo tex "${__pkg}.ins"               # create .sty file from .ins
     fi
     echo "+ TeX Install Log: File '${__pkg}.sty' is created."
   else
@@ -116,12 +122,19 @@ function pkg_install () {
   sudo mkdir "${__pkg_dst}${__pkg}/"
   echo "+ TeX Install Log: TeX folder '${__pkg_dst}${__pkg}/' is created."
   #
-  # Copy recently created file "<package>.sty" to
-  # folder "${__pkg_dst}$<package>/" or
+  # Copy file "<package>.sty" and all related files
+  # "<package>.*" to the newly created folder
+  # "${__pkg_dst}$<package>/" or
   # "${DEFAULT_TEX_LOCATION}<package>/" or
   # "/usr/share/texlive/texmf-dis/tex/latex/<package>/"
-  sudo cp "${__pkg}.*" "${__pkg_dst}${__pkg}/"
-  echo "+ TeX Install Log: Files '${__pkg}.sty' and co. are copied to folder '${__pkg_dst}${__pkg}/'."
+  #sudo cp ${__pkg}.* "${__pkg_dst}${__pkg}/"
+  echo "+ TeX Install Log: Following files '${__pkg}.*' are copied to folder '${__pkg_dst}${__pkg}/'."
+  for f in $(ls -1 | grep "${__pkg}"); do
+    if [ "$f" != *"pdf"* ]; then
+      sudo cp $f "${__pkg_dst}${__pkg}/"
+      echo "+   $f"
+    fi
+  done
   #
   # Change mode (access rights) for all .sty file(s).
   # They should have the access rights "-rw-r--r--"
@@ -172,9 +185,10 @@ function pkg_install () {
   cd "${__pkg_dst}${__pkg}/"
   #sudo chmod a=r *.sty
   #sudo chmod u+w *.sty
-  sudo chmod 0644 *.sty
+  #sudo chmod 0644 *.sty
+  sudo chmod ${__pkg}.*
   #
-  # Go back to download (source) location, and
+  # Go back to download (source) location, and<ext>
   # remove all downloaded package files
   cd ${__pkg_src}
   sudo rm -rf ${__pkg} ${__pkg}.${DEFAULT_FEX}
@@ -197,19 +211,29 @@ function pkg_handle_extra_libs () {
   # case distinction
   if [ -z ${__pkg} ]; then      # if ${__pkg} is empty (zero)
     echo "+ TeX Download Log: Your TeX library is up to date. No package is missing."
-    echo "+ TeX Update Log: Finish."
+    echo "+ TeX Update Log: Done. [OK]"
     exit 0
   else
     echo "+ TeX Download Log: Missing package '${_pkg}.${DEFAULT_FEX}' is identified."
     # install Biber and 'biblatex.sty'
-    if [ "${_pkg}" = "biblatex" ]; then
-      echo "+ TeX Download Log: Downloading '${_pkg}.${DEFAULT_FEX}'.."
+    if [ "${__pkg}" = "biblatex" ]; then
       echo "+ TeX Download Log: sudo apt-get install texlive-bibtex-extra biber"
       sudo apt-get install texlive-bibtex-extra biber
-      tex_lib_update
-      exit 0
+      _fn_out_ "${__pkg}"
+    # install TiKZ PgF and "tikz.sty"
+    elif [ "${__pkg}" = "tikz" ]; then
+      # TODO
+      echo "+ TeX Download Log: Download package 'TiKZ'"
     fi
   fi
+}
+#
+function _fn_out_ () {
+  echo "$1" >> "$1/${DEFAULT_PKG_LOG}"
+  echo "+ TeX Install Log: Package '$1.${DEFAULT_FEX}' has been successfully installed."
+  # update TeX library
+  pkg_update_lib
+  exit 0
 }
 #========================================================================================
 #
@@ -299,15 +323,15 @@ function pkg_download () {
 }
 #========================================================================================
 #
-# FUNCTION (tex_compile)
+# FUNCTION (pkg_tex)
 #
-# Update TeX library (texhash). Compile the TeX document.
+# Compile the TeX document and create output (ps, dvi, pdf).
 #
 # @param:
 #   $1 : name of TeX file to be compiled
 #
 #========================================================================================
-function tex_compile () {
+function pkg_tex () {
   #
   # Check if argument $1 is empty (-z) or not (!)
   if [ ! -z $1 ]; then          # if $1 is not empty..
@@ -387,16 +411,19 @@ function tex_compile () {
   # as "imakeidx", "csquotes" etc.
   #
   _va=$(echo ${_va} | cut -d'.' -f1)
+  #
+  # Assign varible "_pkg" string value (package name)
+  # from general-purpose variable "_va".
   _pkg=${_va}
 }
 #========================================================================================
 #
-# FUNCTION (tex_lib_update)
+# FUNCTION (pkg_update_lib)
 #
 # Update TeX library (texhash).
 #
 #========================================================================================
-function tex_lib_update () {
+function pkg_update_lib () {
   sudo texhash                  # update TeX library
 }
 #========================================================================================
@@ -410,10 +437,10 @@ function main () {
   local __pwd="$(pwd)"
   #
   # update TeX library
-  #tex_lib_update
+  #pkg_update_lib
   #
   # compile main TeX file
-  tex_compile $1
+  pkg_tex $1
   #
   # download missing TeX package
   pkg_download "${_pkg}" "${DEFAULT_DOWNLOAD_LOCATION}"
@@ -426,7 +453,7 @@ function main () {
     exit 0                        # exit program
   else
     echo "+ TeX Download Log: Package '${_pkg}.${DEFAULT_FEX}' has been successfully downloaded" \
-         "in ${DEFAULT_DOWNLOAD_LOCATION}."
+        "in ${DEFAULT_DOWNLOAD_LOCATION}."
   fi
   #
   # install downloaded TeX package
@@ -437,9 +464,9 @@ function main () {
   # "$?" is used to determine the exit code from last operation.
   if [ "$?" -eq "0" ]; then
     echo "${_pkg}" >> "${__pwd}/${DEFAULT_PKG_LOG}"
-    echo "+ TeX InstallLog: Package '${_pkg}.zip' has been successfully installed."
+    echo "+ TeX Install Log: Package '${_pkg}.${DEFAULT_FEX}' has been successfully installed."
   else
-    echo "! TeX Install Error: Package '${_pkg}.zip' couldn't be installed. Abort!"
+    echo "! TeX Install Error: Package '${_pkg}.${DEFAULT_FEX}' couldn't be installed. Abort!"
     exit 1
   fi
   #
@@ -447,7 +474,7 @@ function main () {
   cd ${__pwd}
   #
   # update TeX library
-  tex_lib_update
+  pkg_update_lib
 }
 #========================================================================================
 #
