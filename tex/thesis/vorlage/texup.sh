@@ -41,7 +41,6 @@ DEFAULT_TEX_FILE=thesis.tex   # main tex file
 #========================================================================================
 _va=                          # general-purpose variable
 _pkg=                         # package name
-_fin=1                        # finish flag
 #========================================================================================
 #
 # FUNCTION (pkg_install)
@@ -220,16 +219,18 @@ function pkg_handle_extra_libs () {
       echo "+ TeX Download Log: sudo apt-get install texlive-bibtex-extra biber"
       sudo apt-get install texlive-bibtex-extra biber
       _fn_out_ "${__pkg}"
-    # install TiKZ PgF and "tikz.sty"
+    # install package "pgf" for TikZ ("tikz.sty")
     elif [ "${__pkg}" = "tikz" ]; then
       # TODO
-      echo "+ TeX Download Log: Download package 'TiKZ'"
+      echo "+ TeX Download Log: sudo apt-get install texlive-pictures"
+      sudo apt-get install texlive-pictures
+      _fn_out_ "pgf"             # "pgf" is the package containing TikZ
     fi
   fi
 }
 #
 function _fn_out_ () {
-  echo "$1" >> "$1/${DEFAULT_PKG_LOG}"
+  echo "$1" >> "${_pwd}/${DEFAULT_PKG_LOG}"
   echo "+ TeX Install Log: Package '$1.${DEFAULT_FEX}' has been successfully installed."
   # update TeX library
   pkg_update_lib
@@ -434,7 +435,7 @@ function pkg_update_lib () {
 function main () {
   #
   # get current location (directory)
-  local __pwd="$(pwd)"
+  _pwd="$(pwd)"
   #
   # update TeX library
   #pkg_update_lib
@@ -463,7 +464,7 @@ function main () {
   # (pkg_install) and evaluate/check if exit code is zero.
   # "$?" is used to determine the exit code from last operation.
   if [ "$?" -eq "0" ]; then
-    echo "${_pkg}" >> "${__pwd}/${DEFAULT_PKG_LOG}"
+    echo "${_pkg}" >> "${_pwd}/${DEFAULT_PKG_LOG}"
     echo "+ TeX Install Log: Package '${_pkg}.${DEFAULT_FEX}' has been successfully installed."
   else
     echo "! TeX Install Error: Package '${_pkg}.${DEFAULT_FEX}' couldn't be installed. Abort!"
@@ -471,7 +472,7 @@ function main () {
   fi
   #
   # go back to script's current directory
-  cd ${__pwd}
+  cd ${_pwd}
   #
   # update TeX library
   pkg_update_lib
