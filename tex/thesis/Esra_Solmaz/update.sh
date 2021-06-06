@@ -2,11 +2,12 @@
 #
 #========================================================================================
 # Description:
-#   Copy this script in the same folder of the main tex file.
+#   Copy this script in the same folder of the main tex file
+#   (e.g. "main.tex" or "thesis.tex").
 #   Every time this script runs, it will download and install
-#   only one missing package.
-#   Therefore, you should run this script MANY TIMES until
-#   all missing packages have been download and installed.
+#   (all) missed packages.
+#   For safety, you should run this script TWO TIMES so that
+#   all missing packages can be downloaded and installed.
 #
 # Usage:
 #   ./update.sh
@@ -31,13 +32,14 @@
 # CONSTANTS
 #
 #========================================================================================
+DEFAULT_MAIN_TEX=thesis.tex   # main tex file
+#========================================================================================
 DEFAULT_CTAN_SERVER="https://mirrors.ctan.org/macros/latex/contrib/"
 DEFAULT_DOWNLOAD_LOCATION="/home/$(echo $USER)/Downloads/"
 DEFAULT_TEX_LOCATION="/usr/share/texlive/texmf-dist/tex/latex/"
 DEFAULT_FEX=zip               # file extension (*.zip)
 DEFAULT_TMP_LOG=tmp.log
 DEFAULT_PKG_LOG=pkg.log       # logs downloaded package(s)
-DEFAULT_TEX_FILE=thesis.tex   # main tex file
 #========================================================================================
 #
 # VARIABLES
@@ -353,7 +355,7 @@ function pkg_tex () {
   if [ ! -z $1 ]; then          # if $1 is not empty..
     _va=$1
   else                          # if $1 is empty..
-    _va=${DEFAULT_TEX_FILE}
+    _va=${DEFAULT_MAIN_TEX}
   fi
   #
   # Compile main (tex) file, and store the return value
@@ -395,7 +397,7 @@ function pkg_tex () {
   #   - then, escape-sequence (\') for single-quote;
   #   - finally, thirst quote (') starts third string.
   #
-  echo "+ TeX Compile Log: Creating file '${DEFAULT_TEX_FILE}'.."
+  echo "+ TeX Compile Log: Creating file '${DEFAULT_MAIN_TEX}'.."
   #_va=$(pdflatex -synctex=1 -interaction=nonstopmode ${_va} | grep '.sty'\'' not found.')
   _va=`pdflatex -synctex=1 -interaction=nonstopmode ${_va} | grep '.sty'\'' not found.'`
   #
