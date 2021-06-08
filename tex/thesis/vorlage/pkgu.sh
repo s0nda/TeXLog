@@ -10,22 +10,22 @@
 #   all missing packages can be downloaded and installed.
 #
 # Usage:
-#   ./update.sh
+#   ./pkgu.sh
 # or
-#   ./update.sh $1
+#   ./pkgu.sh $1
 # 
 # where $1 is an optional placeholder for the main TeX file
 # to compile. Assume, the main TeX file is "thesis.tex".
 # Then, the command would look like:
 #
-#   $ ./update.sh thesis.tex
+#   $ ./pkgu.sh thesis.tex
 #
 # You can also let the $1 be empty. The script will choose,
 # compile and update packages for the TeX file, that lies
-# in the same directory as this script "update.sh".
+# in the same directory as this script "pkgu.sh".
 # For example:
 #
-#   $ ./update.sh
+#   $ ./pkgu.sh
 #
 #========================================================================================
 #
