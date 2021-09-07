@@ -1,0 +1,28 @@
+%
+% Title:  "Template Cover Page"
+% File:   "cover.tex"
+% Author: "s0nda"
+%
+% Inspired by https://latexdraw.com/tikz-cover-pages-gallery/
+
+%====================================================== 
+\documentclass[paper=a4,oneside,footsepline,headinclude=false,footinclude=false,fontsize=11pt,listof=totoc,bibliography=totoc]{scrbook}
+
+%======================================================
+\usepackage[]{xcolor}
+\usepackage{tikz}
+
+%======================================================
+\begin{document}
+
+\begin{tikzpicture}[]
+
+\shape[
+left color=red!30,
+right color=red,
+rounded corners=.4cm]
+($(current page.north west)+(5,-10)$) rectangle ++(10,-2);
+
+\end{tikzpicture}
+
+\end{document}
