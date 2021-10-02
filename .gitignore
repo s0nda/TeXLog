@@ -37,5 +37,19 @@
 /tex/thesis/vorlage/*.synctex(busy)
 /tex/thesis/vorlage/*.synctex.gz
 /tex/thesis/vorlage/*.toc
+# Ignore files in ./tex/seminar/Yen/ folder
+/tex/seminar/Yen/*.aux
+/tex/seminar/Yen/*.bbl
+/tex/seminar/Yen/*.bcf
+/tex/seminar/Yen/*.blg
+/tex/seminar/Yen/*.idx
+/tex/seminar/Yen/*.ilg
+/tex/seminar/Yen/*.ind
+/tex/seminar/Yen/*.lof
+/tex/seminar/Yen/*.log
+/tex/seminar/Yen/*.out
+/tex/seminar/Yen/*.run.xml
+/tex/seminar/Yen/*.synctex.gz
+/tex/seminar/Yen/*.toc
 # Except the .gitignore file itself
 !.gitignore
